@@ -1991,54 +1991,52 @@ input, select, textarea {
 
 /* Special */
 
-	ul.special {
-		list-style: none;
-		padding-left: 0;
-		cursor: default;
-		position: relative;
-		margin: -2em 0 4em -2em;
-	}
+/* Special Icons */
+ul.special {
+    list-style: none;
+    padding-left: 0;
+    cursor: default;
+    position: relative;
+    margin: -2em 0 4em -2em;
+}
 
-		ul.special li {
-			-moz-transition: top .15s ease-in-out;
-			-webkit-transition: top .15s ease-in-out;
-			-ms-transition: top .15s ease-in-out;
-			transition: top .15s ease-in-out;
-			position: relative;
-			display: inline-block;
-			top: 0;
-			padding: 2em 0 0 2em;
-		}
+ul.special li {
+    transition: top .15s ease-in-out;
+    position: relative;
+    display: inline-block;
+    top: 0;
+    padding: 2em 0 0 2em;
+}
 
-			ul.special li a {
-				display: block;
-				outline: 0;
-			}
+ul.special li a {
+    display: block;
+    outline: 0;
+    text-align: center;
+}
 
-				ul.special li a:before {
-					-moz-transition: background-color .2s ease-in-out;
-					-webkit-transition: background-color .2s ease-in-out;
-					-ms-transition: background-color .2s ease-in-out;
-					transition: background-color .2s ease-in-out;
-					display: block;
-					text-align: center;
-					background: #c1cac5;
-					border-radius: 100%;
-					width: 2.25em;
-					height: 2.25em;
-					line-height: 2.175em;
-					font-size: 5em;
-					color: #fff;
-				}
+ul.special li a .icon-image {
+    display: block;
+    width: 150px; /* Adjust the size as needed */
+    height: 110px; /* Adjust the size as needed */
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: transform 0.5s ease-in-out;
+}
 
-			ul.special li:hover {
-				top: -1em;
-			}
+ul.special li:hover {
+    top: -1em;
+}
 
-				ul.special li:hover a:before {
-					background: #b9d2ce;
-				}
+ul.special li:hover a .icon-image {
+    transform: scale(1.1);
+}
 
+ul.special li a .label {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 1em;
+    color: #333;
+}
 /* Meta */
 
 	ul.meta {
@@ -2264,6 +2262,7 @@ input, select, textarea {
 		position: relative;
 		text-decoration: none;
 	}
+	
 
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
@@ -2348,7 +2347,7 @@ input, select, textarea {
 		top: 0;
 		left: 0;
 		z-index: 1000;
-		background-color: rgba(255, 255, 255, 0.95);
+		background-color: rgba(255, 247, 247, 0.753);
 		background-image: url("images/overlay.png");
 		width: 100%;
 		height: 3.25em;
@@ -2412,7 +2411,7 @@ input, select, textarea {
 			}
 
 			#nav li.current a {
-				background: #b1ddab;
+				background: #6b7770;
 				color: #fff;
 			}
 
@@ -2478,7 +2477,7 @@ input, select, textarea {
 
 	#banner {
 		position: relative;
-		background-image: url("images/overlay.png"), url("images/overlay.png"), url("../../images/banner.jpg");
+		background-image: url("images/overlay.png"), url("images/overlay.png"), url("../../images/wheelchair.jpg");
 		background-position: top left, top left, center center;
 		background-repeat: repeat, repeat, no-repeat;
 		background-size: auto, auto, cover;
@@ -2498,18 +2497,32 @@ input, select, textarea {
 		}
 
 			#banner .content h2 {
-				color: #3f3535;
-				font-size: 2.75em;
+				color: #554a39;
+				font-size: 6em;
 				margin: 0 0 0.5em 0;
+				animation: textZoomIn 2s ease-in-out;
 			}
+			
 
+			
+			/* Keyframes for text zoom-in animation */
+			@keyframes textZoomIn {
+				from {
+					transform: scale(0.5);
+					opacity: 0;
+				}
+				to {
+					transform: scale(1);
+					opacity: 1;
+				}
+			}
 
 
 /* Main */
 
 	#main {
 		background: #fff;
-		border-top: solid 5px #b1ddab;
+		border-top: solid 5px #000000;
 		border-bottom: solid 5px #c1cac5;
 		border-top-width: 35px;
 		border-bottom-width: 10px;
