@@ -1738,7 +1738,7 @@ input, select, textarea {
 
 		.image img {
 			display: block;
-			width: 100%;
+			width: 110%;
 			border-radius: 8px;
 		}
 
@@ -1991,54 +1991,52 @@ input, select, textarea {
 
 /* Special */
 
-	ul.special {
-		list-style: none;
-		padding-left: 0;
-		cursor: default;
-		position: relative;
-		margin: -2em 0 4em -2em;
-	}
+/* Special Icons */
+ul.special {
+    list-style: none;
+    padding-left: 0;
+    cursor: default;
+    position: relative;
+    margin: -2em 0 4em -2em;
+}
 
-		ul.special li {
-			-moz-transition: top .15s ease-in-out;
-			-webkit-transition: top .15s ease-in-out;
-			-ms-transition: top .15s ease-in-out;
-			transition: top .15s ease-in-out;
-			position: relative;
-			display: inline-block;
-			top: 0;
-			padding: 2em 0 0 2em;
-		}
+ul.special li {
+    transition: top .15s ease-in-out;
+    position: relative;
+    display: inline-block;
+    top: 0;
+    padding: 2em 0 0 2em;
+}
 
-			ul.special li a {
-				display: block;
-				outline: 0;
-			}
+ul.special li a {
+    display: block;
+    outline: 0;
+    text-align: center;
+}
 
-				ul.special li a:before {
-					-moz-transition: background-color .2s ease-in-out;
-					-webkit-transition: background-color .2s ease-in-out;
-					-ms-transition: background-color .2s ease-in-out;
-					transition: background-color .2s ease-in-out;
-					display: block;
-					text-align: center;
-					background: #c1cac5;
-					border-radius: 100%;
-					width: 2.25em;
-					height: 2.25em;
-					line-height: 2.175em;
-					font-size: 5em;
-					color: #fff;
-				}
+ul.special li a .icon-image {
+    display: block;
+    width: 150px; /* Adjust the size as needed */
+    height: 110px; /* Adjust the size as needed */
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: transform 0.5s ease-in-out;
+}
 
-			ul.special li:hover {
-				top: -1em;
-			}
+ul.special li:hover {
+    top: -1em;
+}
 
-				ul.special li:hover a:before {
-					background: #b9d2ce;
-				}
+ul.special li:hover a .icon-image {
+    transform: scale(1.1);
+}
 
+ul.special li a .label {
+    display: block;
+    margin-top: 0.5em;
+    font-size: 1em;
+    color: #333;
+}
 /* Meta */
 
 	ul.meta {
@@ -2195,6 +2193,10 @@ input, select, textarea {
 
 	.box.highlight {
 		text-align: center;
+		padding: 4em 0 4em 0;
+		background: #eeecec;
+		transform: scale(1.1);
+		
 	}
 
 		.box.highlight h2 {
@@ -2205,11 +2207,21 @@ input, select, textarea {
 		.box.highlight header > p {
 			font-size: 1.65em;
 			margin: 0 0 1.5em 0;
-		}
 
-	.box.feature {
-		text-align: center;
-	}
+		}
+		.box.feature .image.featured {
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+    position: relative;
+}
+
+.box.feature .image.featured img {
+    transition: transform 0.5s ease-in-out; /* Smooth transition for the zoom effect */
+}
+
+.box.feature .image.featured:hover img {
+    transform: scale(1.1); /* Zoom in the image on hover */
+}
+
 
 	.box.post header {
 		margin: 0 0 2.5em 0;
@@ -2256,6 +2268,7 @@ input, select, textarea {
 	.box.page-content ul.meta {
 		margin: 0 0 0.5em 0;
 	}
+	
 
 /* Icons */
 
@@ -2264,6 +2277,7 @@ input, select, textarea {
 		position: relative;
 		text-decoration: none;
 	}
+	
 
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
@@ -2343,79 +2357,6 @@ input, select, textarea {
 		padding-top: 3.25em;
 	}
 
-	#nav {
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 1000;
-		background-color: rgba(255, 255, 255, 0.95);
-		background-image: url("images/overlay.png");
-		width: 100%;
-		height: 3.25em;
-		line-height: 3.25em;
-		text-align: center;
-		font-family: 'Open Sans Condensed', sans-serif;
-		font-weight: 700;
-		text-transform: uppercase;
-		cursor: default;
-	}
-
-		#nav ul {
-			position: relative;
-			z-index: 1001;
-		}
-
-		#nav li {
-			display: inline-block;
-			margin: 0 0.5em 0 0.5em;
-			top: 0;
-			position: relative;
-			-moz-transition: top .15s ease-in-out;
-			-webkit-transition: top .15s ease-in-out;
-			-o-transition: top .15s ease-in-out;
-			-ms-transition: top .15s ease-in-out;
-			transition: top .15s ease-in-out;
-		}
-
-			#nav li > ul {
-				display: none;
-			}
-
-			#nav li a, #nav li span {
-				-moz-transition: background-color .075s ease-in-out, color .075s ease-in-out;
-				-webkit-transition: background-color .075s ease-in-out, color .075s ease-in-out;
-				-ms-transition: background-color .075s ease-in-out, color .075s ease-in-out;
-				transition: background-color .075s ease-in-out, color .075s ease-in-out;
-				position: relative;
-				display: block;
-				text-decoration: none;
-				color: #6b7770;
-				top: -6px;
-				padding: 6px 1.5em 0.25em 1.5em;
-				border-bottom-left-radius: 6px;
-				border-bottom-right-radius: 6px;
-				outline: 0;
-			}
-
-			#nav li:hover, #nav li.active {
-				top: 3px;
-			}
-
-			#nav li:hover a, #nav li:hover span {
-				background: #C1CAC5;
-				color: #fff;
-			}
-
-			#nav li.active a, #nav li.active span {
-				background: #C1CAC5;
-				color: #fff;
-			}
-
-			#nav li.current a {
-				background: #b1ddab;
-				color: #fff;
-			}
-
 	.dropotron {
 		list-style: none;
 		background: #6B7770;
@@ -2478,7 +2419,7 @@ input, select, textarea {
 
 	#banner {
 		position: relative;
-		background-image: url("images/overlay.png"), url("images/overlay.png"), url("../../images/banner.jpg");
+		background-image: url("images/overlay.png"), url("images/overlay.png"), url("../../images/wheelchair.jpg");
 		background-position: top left, top left, center center;
 		background-repeat: repeat, repeat, no-repeat;
 		background-size: auto, auto, cover;
@@ -2498,18 +2439,32 @@ input, select, textarea {
 		}
 
 			#banner .content h2 {
-				color: #3f3535;
-				font-size: 2.75em;
+				color: #554a39;
+				font-size: 6em;
 				margin: 0 0 0.5em 0;
+				animation: textZoomIn 2s ease-in-out;
 			}
+			
 
+			
+			/* Keyframes for text zoom-in animation */
+			@keyframes textZoomIn {
+				from {
+					transform: scale(0.5);
+					opacity: 0;
+				}
+				to {
+					transform: scale(1);
+					opacity: 1;
+				}
+			}
 
 
 /* Main */
 
 	#main {
 		background: #fff;
-		border-top: solid 5px #b1ddab;
+		border-top: solid 5px #000000;
 		border-bottom: solid 5px #c1cac5;
 		border-top-width: 35px;
 		border-bottom-width: 10px;
@@ -2581,6 +2536,7 @@ input, select, textarea {
 				font-size: 12pt;
 				line-height: 1.75em;
 			}
+			
 
 	}
 
@@ -2603,11 +2559,12 @@ input, select, textarea {
 		/* Box */
 
 			.box.highlight h2 {
-				font-size: 2.5em;
+				font-size: 3em; 
+				font-weight: bold;
 			}
 
 			.box.highlight header > p {
-				font-size: 1.25em;
+				font-size: 2em; 
 			}
 
 			.box.post h3 {
@@ -2663,7 +2620,6 @@ input, select, textarea {
 		display: none;
 	}
 
-	@media screen and (max-width: 980px) {
 
 		/* Basic */
 
@@ -2913,7 +2869,7 @@ input, select, textarea {
 				transform: translateX(0);
 			}
 
-	}
+	
 
 /* Small */
 
