@@ -31,14 +31,143 @@
     </nav>
     <section id="main">
         <div class="container">
-            <h2>Implementation Details</h2>
-            <p>This is where the content for the implementation details will go.</p>
+            <h2 class="major"><span>Implementation Details</span></h2>
+            <section class="box highlight">
+                <h3>Authentication</h3>
+                <p>Details about the authentication implementation, including the frameworks and libraries used.</p>
+                <img src="images/authentication.jpg" alt="Authentication" class="image featured">
+                <p>We used the <strong>Passport.js</strong> library for authentication. Below is a code snippet demonstrating the setup:</p>
+                <pre><code class="language-javascript">
+// filepath: /path/to/authentication.js
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+
+passport.use(new LocalStrategy(
+  function(username, password, done) {
+    // Authentication logic here
+  }
+));
+                </code></pre>
+            </section>
+            <section class="box highlight">
+                <h3>Database Connection</h3>
+                <p>Details about the database connection implementation, including the frameworks and libraries used.</p>
+                <img src="images/database_connection.jpg" alt="Database Connection" class="image featured">
+                <p>We used <strong>MongoDB</strong> as our database and <strong>Mongoose</strong> for object data modeling. Below is a code snippet demonstrating the setup:</p>
+                <pre><code class="language-javascript">
+// filepath: /path/to/database.js
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/mydatabase', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+                </code></pre>
+            </section>
+            <section class="box highlight">
+                <h3>Data Table</h3>
+                <p>Details about the data table implementation, including the frameworks and libraries used.</p>
+                <img src="images/data_table.jpg" alt="Data Table" class="image featured">
+                <p>We used the <strong>DataTables</strong> jQuery plugin for displaying data tables. Below is a code snippet demonstrating the setup:</p>
+                <pre><code class="language-javascript">
+// filepath: /path/to/data_table.js
+$(document).ready(function() {
+  $('#example').DataTable();
+});
+                </code></pre>
+            </section>
+            <section class="box highlight">
+                <h3>Trend Chart</h3>
+                <p>Details about the trend chart implementation, including the frameworks and libraries used.</p>
+                <img src="images/trend_chart.jpg" alt="Trend Chart" class="image featured">
+                <p>We used the <strong>Chart.js</strong> library for creating trend charts. Below is a code snippet demonstrating the setup:</p>
+                <pre><code class="language-javascript">
+// filepath: /path/to/trend_chart.js
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [{
+      label: 'Trend',
+      data: [65, 59, 80, 81, 56, 55, 40],
+      borderColor: 'rgba(75, 192, 192, 1)',
+      borderWidth: 1
+    }]
+  }
+});
+                </code></pre>
+            </section>
+            <section class="box highlight">
+                <h3>CSV Data Import</h3>
+                <p>Details about the CSV data import implementation, including the frameworks and libraries used.</p>
+                <img src="images/csv_import.jpg" alt="CSV Data Import" class="image featured">
+                <p>We used the <strong>PapaParse</strong> library for parsing CSV data. Below is a code snippet demonstrating the setup:</p>
+                <pre><code class="language-javascript">
+// filepath: /path/to/csv_import.js
+Papa.parse(file, {
+  complete: function(results) {
+    console.log(results);
+  }
+});
+                </code></pre>
+            </section>
+            <section class="box highlight">
+                <h3>PDF Generation</h3>
+                <p>Details about the PDF generation implementation, including the frameworks and libraries used.</p>
+                <img src="images/pdf_generation.jpg" alt="PDF Generation" class="image featured">
+                <p>We used the <strong>jsPDF</strong> library for generating PDFs. Below is a code snippet demonstrating the setup:</p>
+                <pre><code class="language-javascript">
+// filepath: /path/to/pdf_generation.js
+const doc = new jsPDF();
+doc.text('Hello world!', 10, 10);
+doc.save('a4.pdf');
+                </code></pre>
+            </section>
+            <section class="box highlight">
+                <h3>Notification</h3>
+                <p>Details about the notification implementation, including the frameworks and libraries used.</p>
+                <img src="images/notification.jpg" alt="Notification" class="image featured">
+                <p>We used the <strong>Toastr</strong> library for notifications. Below is a code snippet demonstrating the setup:</p>
+                <pre><code class="language-javascript">
+// filepath: /path/to/notification.js
+toastr.success('Data saved successfully!');
+                </code></pre>
+            </section>
         </div>
     </section>
     <footer id="footer">
         <div class="container">
-            <p>&copy; Your Name. All rights reserved.</p>
+            <div class="row gtr-200">
+                <div class="col-12">
+                    <!-- Contact -->
+                    <section>
+                        <h2 class="major"><span>Get in touch</span></h2>
+                        <ul class="contact">
+                            <li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
+                            <li><a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a></li>
+                            <li><a class="icon brands fa-instagram" href="#"><span class="label">Instagram</span></a></li>
+                            <li><a class="icon brands fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
+                            <li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <div id="copyright">
+                <ul class="menu">
+                    <li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
