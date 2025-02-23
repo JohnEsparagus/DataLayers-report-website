@@ -10,6 +10,106 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+		<style>
+			.custom-icon-list {
+				list-style: none;
+				padding-left: 0;
+			}
+	
+			.custom-icon-list li {
+				position: relative;
+				padding-left: 25px;
+				margin-bottom: 1em;
+			}
+	
+			.custom-icon-list li:before {
+				content: '\f061'; /* FontAwesome check icon */
+				font-family: 'Font Awesome 5 Free';
+				font-weight: 900;
+				position: absolute;
+				left: 0;
+				top: 0;
+				color: #006376;
+				}
+			
+				.tabs {
+            display: flex;
+            cursor: pointer;
+            margin-bottom: 1em;
+            justify-content: center;
+            border-bottom: 1px solid #c1cac5;
+            text-align: center;
+        	}
+        	.tabs a {
+        	    padding: 10px 20px;
+        	    background: #e7eae8;
+        		border: 1px solid #c1cac5;
+        	    border-bottom: none;
+        	    margin-right: 5px;
+        	    text-decoration: none;
+        	    color: inherit;
+        	    display: inline-block;
+        	}
+        	.tabs a.active {
+        	    background: #c4e0bd;
+        	    border-bottom: 1px solid #fff;
+        	}
+        	.tab-content .tab-pane {
+        	    display: none;
+        	    visibility: hidden;
+
+        	}
+        	.tab-content .tab-pane.active {
+        	    display: block;
+        	    visibility: visible;
+        	}
+			.p {
+				text-align: justify;
+			}
+			.interview-text p {
+            margin-bottom: 0.5em;
+        		}
+			.interview-text {
+				border-bottom: 1px solid #c1cac5;
+				padding-bottom: 1em;
+			}
+			.question {
+				font-weight: bold;
+			}
+			.answer {
+				margin-left: 1.5em;
+				}
+			.collapsible {
+				cursor: pointer;
+				background-color: #c4e0bd;
+				color: #333;
+				padding: 10px;
+				border: none;
+				text-align: center;
+				outline: none;
+				font-size: 1.25em;
+				transition: background-color 0.3s ease;
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 1em;
+				justify-content: center;
+
+			}
+	
+			.collapsible:hover {
+				background-color: #b1ddab;
+			}
+	
+			.content {
+				padding: 0 18px;
+				display: none;
+				overflow: hidden;
+				background-color: #f9f9f9;
+				border-left: 5px solid #c4e0bd;
+				margin-bottom: 1em;
+			}
+		</style>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
@@ -27,16 +127,17 @@
 			<!-- Nav -->
 			<nav id="nav">
 				<ul>
-						<li><a href="index.html">Home</a></li>
-						<li class="current"><a href="requirements.html">Requirements</a></li>
-						<li><a href="research.html">Research</a></li>
-						<li><a href="algorithms.html">Algorithms</a></li>
-						<li><a href="ui_design.html">UI Design</a></li>
-						<li><a href="system_design.html">System Design</a></li>
-						<li><a href="implementation.html">Implementation</a></li>
-						<li><a href="testing.html">Testing</a></li>
-						<li><a href="evaluation.html">Evaluation</a></li>
-						<li><a href="appendices.html">Appendices</a></li>
+					<li><a href="index.html">Home</a></li>
+					<li class="current"><a href="requirements.html">Requirements</a></li>
+					<li><a href="research.html">Research</a></li>
+					<li><a href="algorithms.html">Algorithms</a></li>
+					<li><a href="ui_design.html">UI Design</a></li>
+					<li><a href="system_design.html">System Design</a></li>
+					<li><a href="implementation.html">Implementation</a></li>
+					<li><a href="testing.html">Testing</a></li>
+					<li><a href="evaluation.html">Evaluation</a></li>
+					<li><a href="appendices.html">Appendices</a></li>
+					<li><a href="blog.html">blog</a></li>
 				</ul>
 			</nav>
 
@@ -44,70 +145,94 @@
 				<section id="main">
 					<div class="container">
 						<h2 class="major"><span>Requirements</span></h2>
-						<section class="box highlight">
-							<h3>Partner Introduction and Project Background</h3>
-							<p>This section will introduce the partners and provide background information about the project.</p>
-						</section>
-						<section class="box highlight">
-							<h3>Project Goals</h3>
-							<p>This section will outline the goals of the project.</p>
-						</section>
-						<section class="box highlight">
-							<h3>Requirement Gathering</h3>
-							<p>This section will describe how the requirements were gathered, including any surveys designed and how the survey data was analyzed.</p>
-						</section>
-						<section class="box highlight">
-							<h3>Personas</h3>
-							<p>This section will describe the typical users of the project.</p>
-						</section>
-						<section class="box highlight">
-							<h3>Use Cases</h3>
-							<p>This section will include a use case diagram and a list of use cases.</p>
-						</section>
-						<section class="box highlight">
-							<h3>MoSCoW Requirement List</h3>
-							<h4>Functional Requirements</h4>
-							<table class="default">
-								<thead>
-									<tr>
-										<th>Must Have</th>
-										<th>Should Have</th>
-										<th>Could Have</th>
-										<th>Won't Have</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Requirement 1</td>
-										<td>Requirement 2</td>
-										<td>Requirement 3</td>
-										<td>Requirement 4</td>
-									</tr>
-								</tbody>
-							</table>
-							<h4>Non-Functional Requirements</h4>
-							<table class="default">
-								<thead>
-									<tr>
-										<th>Performance</th>
-										<th>Security</th>
-										<th>Usability</th>
-										<th>Maintainability</th>
-										<th>Extensibility</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Requirement 1</td>
-										<td>Requirement 2</td>
-										<td>Requirement 3</td>
-										<td>Requirement 4</td>
-										<td>Requirement 5</td>
-									</tr>
-								</tbody>
-							</table>
-						</section>
-					</div>
+						<section>
+							<h2>Project Background</h2>
+							<p>Go into the brief history of this project the background.</p>
+									<ul class="special">
+										<li><a href="#"><img src="images/GDIH.jpg" alt="GDIH" class="icon-image"><span class="label">GDIH</span></a></li>
+										<li><a href="#"><img src="images/GOV.jpg" alt="GOV" class="icon-image"><span class="label">GOV</span></a></li>
+										<li><a href="#"><img src="images/RNIB.jpg" alt="RNIB" class="icon-image"><span class="label">RNIB</span></a></li>
+										<li><a href="#"><img src="images/soundscape.jpg" alt="Soundscape" class="icon-image"><span class="label">Soundscape</span></a></li>
+										<li><a href="#"><img src="images/wheelchairalliance.jpg" alt="Wheelchair Alliance" class="icon-image"><span class="label">Wheelchair Alliance</span></a></li>
+									</ul>
+								</section>
+								<section>
+									<h2><strong>Project Goals</strong></h2>
+									<p>Our project aims to provide a comprehensive data layer for accessibility, enabling users to navigate urban environments with ease. We will create a widget that developers easily intergrate into their  websites with comprehensive documentation, impementing location services, data visualisation.</p>
+									<p>Our goals include:</p>
+									<ul class="custom-icon-list">
+										<li><strong>Empower Accessibility:</strong> Empower those with accessibility issues, the ability to move swiftly and confidently around dense cities.</li>
+										<li><strong>Community Platform:</strong> Provide a platform for users to share their experiences and knowledge of the city.</li>
+										<li><strong>Inclusive Widget:</strong> A reliable and inclusive widget developers can use in their websites.</li>
+									</ul>
+									<p>We hope this will deliver a robust and accessible tool that significantly improves the navigation experience for wheelchair users, making it easier for them to find and access essential services and features in their environment.</p>
+								</section>
+								<section>
+									<h2><strong>Requirement Gathering Process</strong></h2>
+									<p>Our goal was to ensure the HCI component met diverse user needs, focusing on accessibility and inclusivity. This section outlines our methods for collecting, analyzing, and prioritizing user requirements.</p>
+									
+									<h4>Methods of Requirement Collection</h4>
+									<p>We conducted semi-structured interviews with software engineers and visually impaired individuals to gather detailed insights into their needs and challenges. Software engineers discussed technical challenges and API requirements, while visually impaired individuals focused on accessibility needs and navigation challenges. Regular consultations with stakeholders helped integrate their feedback and evolving needs into the project.</p>
+									
+									<div class="tabs">
+										<a href="#interview1" class="tab active" data-tab="interview1">Interview 1</a>
+										<a href="#interview2" class="tab" data-tab="interview2">Interview 2</a>
+									</div>
+									<div class="tab-content">
+										<div id="interview1" class="tab-pane active interview-text">
+												<p class="question"><i class="fas fa-question-circle"></i> What are some common challenges that you face when navigating public spaces?</p>
+												<p class="answer">One of the biggest challenges is the lack of information about my surroundings. It's difficult and scary to navigate an area that you are not familiar with.</p>
+												<p class="question"><i class="fas fa-question-circle"></i> Do you use any GPS apps and if so, do they address your challenges appropriately?</p>
+												<p class="answer">I use common applications like Google and Apple Maps, but they don't provide enough information about things like locations of staircases, entrances, barriers, etc. There isn't enough for people with special accessibility needs.</p>
+												<p class="question"><i class="fas fa-question-circle"></i> Would you find it helpful to have certain tags and markers on a map indicating these types of objects?</p>
+												<p class="answer">Yes, that would be very helpful.</p>
+												<p class="question"><i class="fas fa-question-circle"></i> What would be your preferred way of interacting with this app?</p>
+												<p class="answer">A mobile interface would be most convenient and portable for me. In addition, I would prefer if there was an audio description feature accompanying a UI with accessibility features (e.g. large text, contrast in colours, etc.).</p>
+										</div>
+										<div id="interview2" class="tab-pane interview-text">
+												<p class="question"><i class="fas fa-question-circle"></i> What challenges do you face with location-based applications?</p>
+												<p class="answer">Handling varying data sources and making sure it is accurate, structured data for different use cases is a major challenge. Especially when dealing with different resolutions or temporary obstacles.</p>
+												<p class="question"><i class="fas fa-question-circle"></i> How do you typically manage geospatial data?</p>
+												<p class="answer">I use APIs like Google Maps and OpenStreetMap, along with tools like what3words for precision. The challenge is integrating and presenting this data, especially with varying resolutions.</p>
+												<p class="question"><i class="fas fa-question-circle"></i> What features would be helpful in an API for your projects?</p>
+												<p class="answer">An API should support multiple data layers, allow querying by location, handle grid-based data with adjustable resolutions, and support metadata like reliability or expiry dates.</p>
+												<p class="question"><i class="fas fa-question-circle"></i> How should data be displayed in a frontend widget?</p>
+												<p class="answer">A map interface with clear markers, voice input, and location-based search would be ideal. Users should easily toggle between layers.</p>
+												<p class="question"><i class="fas fa-question-circle"></i> Would you find features like temporary object flags or voice search useful?</p>
+												<p class="answer">Yes, these features would enhance usability and ensure accurate, dynamic data, especially in real-time environments.</p>
+										</div>
+									</div>
+									
+									<button class="collapsible">What are the common themes identified from the interviews?</button>
+									<div class="content">
+										<p>We identified common themes from the interviews, such as location-based application challenges, API flexibility, and frontend requirements.</p>
+									</div>
+									
+									<button class="collapsible">What challenges were encountered during the requirement gathering process?</button>
+									<div class="content">
+										<p>We faced several challenges during the requirement gathering process, including balancing technical robustness and accessibility, and ensuring accuracy across multiple data sources.</p>
+									</div>
+									
+									<button class="collapsible">What insights were gained from the analysis?</button>
+									<div class="content">
+										<p>From our analysis, we gained several key insights, such as the critical need for features like audio descriptions and high-contrast UI for accessibility, and the importance of adjustable grid resolutions and multiple data layers for API flexibility.</p>
+									</div>
+									
+									<button class="collapsible">What conclusions were drawn from the requirement gathering process?</button>
+									<div class="content">
+										<p>Our iterative requirement gathering process, involving interviews and stakeholder consultations, allowed us to gather detailed insights and prioritize them effectively. This ensured our HCI component would be accessible and technically robust, meeting diverse user needs.</p>
+								</section>
+								<section>
+									<h2>Personas</h2>
+									<img src="images/persona1.png" alt="Software eng">
+									<p>This section will describe the typical users of the project.</p>
+									<img src="images/persona2.png" alt="Disabled Person">
+								</section>
+								<section>
+									<h2>Use Cases</h2>
+									<p>This section will include a use case diagram and a list of use cases.</p>
+								</section>
+							</div>
 				</section>
 
 			<!-- Footer -->
@@ -155,6 +280,38 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const tabs = document.querySelectorAll('.tabs a');
+                const tabPanes = document.querySelectorAll('.tab-content .tab-pane');
+                tabs.forEach(tab => {
+                    tab.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        tabs.forEach(t => {
+                            t.classList.remove('active');
+                            t.setAttribute('aria-selected', 'false');
+                        });
+                        tabPanes.forEach(pane => pane.classList.remove('active'));
+                        this.classList.add('active');
+                        this.setAttribute('aria-selected', 'true');
+                        document.querySelector(this.getAttribute('href')).classList.add('active');
+                    });
+                });
 
-	</body>
+                const collapsibles = document.querySelectorAll('.collapsible');
+                collapsibles.forEach(collapsible => {
+                    collapsible.addEventListener('click', function () {
+                        this.classList.toggle('active');
+                        const content = this.nextElementSibling;
+                        if (content.style.display === 'block') {
+                            content.style.display = 'none';
+                        } else {
+                            content.style.display = 'block';
+                        }
+                    });
+                });
+            });
+        </script>
+    </div>
+</body>
 </html>
