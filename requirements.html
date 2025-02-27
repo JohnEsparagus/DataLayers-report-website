@@ -145,7 +145,7 @@
 				<section id="main">
 					<div class="container">
 						<h2 class="major"><span>Requirements</span></h2>
-						<section>
+						<section class="blur-in-trigger hidden">
 							<h2>Project Background</h2>
 							<p>Go into the brief history of this project the background.</p>
 									<ul class="special">
@@ -156,7 +156,7 @@
 										<li><a href="#"><img src="images/wheelchairalliance.jpg" alt="Wheelchair Alliance" class="icon-image"><span class="label">Wheelchair Alliance</span></a></li>
 									</ul>
 								</section>
-								<section>
+								<section class="blur-in-trigger hidden">
 									<h2><strong>Project Goals</strong></h2>
 									<p>Our project aims to provide a comprehensive data layer for accessibility, enabling users to navigate urban environments with ease. We will create a widget that developers easily intergrate into their  websites with comprehensive documentation, impementing location services, data visualisation.</p>
 									<p>Our goals include:</p>
@@ -168,18 +168,19 @@
 									<p>We hope this will deliver a robust and accessible tool that significantly improves the navigation experience for wheelchair users, making it easier for them to find and access essential services and features in their environment.</p>
 								</section>
 								<section>
+								<section class="slide-in-trigger hidden">
 									<h2><strong>Requirement Gathering Process</strong></h2>
 									<p>Our goal was to ensure the HCI component met diverse user needs, focusing on accessibility and inclusivity. This section outlines our methods for collecting, analyzing, and prioritizing user requirements.</p>
 									
 									<h4>Methods of Requirement Collection</h4>
 									<p>We conducted semi-structured interviews with software engineers and visually impaired individuals to gather detailed insights into their needs and challenges. Software engineers discussed technical challenges and API requirements, while visually impaired individuals focused on accessibility needs and navigation challenges. Regular consultations with stakeholders helped integrate their feedback and evolving needs into the project.</p>
-									
+								</section>
 									<div class="tabs">
 										<a href="#interview1" class="tab active" data-tab="interview1">Interview 1</a>
 										<a href="#interview2" class="tab" data-tab="interview2">Interview 2</a>
 									</div>
-									<div class="tab-content">
-										<div id="interview1" class="tab-pane active interview-text">
+									<div class="tab-content ">
+										<div id="interview1" class="tab-pane active interview-text blur-in-trigger hidden">
 												<p class="question"><i class="fas fa-question-circle"></i> What are some common challenges that you face when navigating public spaces?</p>
 												<p class="answer">One of the biggest challenges is the lack of information about my surroundings. It's difficult and scary to navigate an area that you are not familiar with.</p>
 												<p class="question"><i class="fas fa-question-circle"></i> Do you use any GPS apps and if so, do they address your challenges appropriately?</p>
@@ -189,7 +190,7 @@
 												<p class="question"><i class="fas fa-question-circle"></i> What would be your preferred way of interacting with this app?</p>
 												<p class="answer">A mobile interface would be most convenient and portable for me. In addition, I would prefer if there was an audio description feature accompanying a UI with accessibility features (e.g. large text, contrast in colours, etc.).</p>
 										</div>
-										<div id="interview2" class="tab-pane interview-text">
+										<div id="interview2" class="tab-pane interview-text blur-in-trigger hidden">
 												<p class="question"><i class="fas fa-question-circle"></i> What challenges do you face with location-based applications?</p>
 												<p class="answer">Handling varying data sources and making sure it is accurate, structured data for different use cases is a major challenge. Especially when dealing with different resolutions or temporary obstacles.</p>
 												<p class="question"><i class="fas fa-question-circle"></i> How do you typically manage geospatial data?</p>
@@ -202,31 +203,31 @@
 												<p class="answer">Yes, these features would enhance usability and ensure accurate, dynamic data, especially in real-time environments.</p>
 										</div>
 									</div>
-									
+								
 									<button class="collapsible">What are the common themes identified from the interviews?</button>
-									<div class="content">
+									<div class="content slide-in-trigger hidden">
 										<p>We identified common themes from the interviews, such as location-based application challenges, API flexibility, and frontend requirements.</p>
 									</div>
 									
 									<button class="collapsible">What challenges were encountered during the requirement gathering process?</button>
-									<div class="content">
+									<div class="content slide-in-trigger hidden">
 										<p>We faced several challenges during the requirement gathering process, including balancing technical robustness and accessibility, and ensuring accuracy across multiple data sources.</p>
 									</div>
 									
 									<button class="collapsible">What insights were gained from the analysis?</button>
-									<div class="content">
+									<div class="content slide-in-trigger hidden">
 										<p>From our analysis, we gained several key insights, such as the critical need for features like audio descriptions and high-contrast UI for accessibility, and the importance of adjustable grid resolutions and multiple data layers for API flexibility.</p>
 									</div>
 									
 									<button class="collapsible">What conclusions were drawn from the requirement gathering process?</button>
-									<div class="content">
+									<div class="content slide-in-trigger hidden">
 										<p>Our iterative requirement gathering process, involving interviews and stakeholder consultations, allowed us to gather detailed insights and prioritize them effectively. This ensured our HCI component would be accessible and technically robust, meeting diverse user needs.</p>
 								</section>
 								<section>
 									<h2>Personas</h2>
-									<img src="images/persona1.png" alt="Software eng">
+									<img src="images/persona1.png" alt="Software eng" class="blur-in-trigger hidden">
 									<p>This section will describe the typical users of the project.</p>
-									<img src="images/persona2.png" alt="Disabled Person">
+									<img src="images/persona2.png" alt="Disabled Person" class="blur-in-trigger hidden">
 								</section>
 								<section>
 									<h2>Use Cases</h2>
@@ -280,6 +281,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/animate_scroll.js"></script>
 			<script>
             document.addEventListener('DOMContentLoaded', function () {
                 const tabs = document.querySelectorAll('.tabs a');

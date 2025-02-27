@@ -2194,7 +2194,7 @@ ul.special li a .label {
 	.box.highlight {
 		text-align: center;
 		padding: 4em 0 4em 0;
-		background: #eeecec;
+		background: #faf8f8;
 		transform: scale(1.1);
 		
 	}
@@ -3030,3 +3030,38 @@ ul.special li a .label {
 			}
 
 	}
+
+/* Custom CSS */
+
+
+
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes blurIn {
+    from {
+        filter: blur(5px);
+        opacity: 0;
+    }
+    to {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideIn 1s ease-out forwards;
+}
+
+.blur-in {
+    animation: blurIn 1s ease-out forwards;
+}
