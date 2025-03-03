@@ -10,8 +10,42 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			#custom-banner {
+    			background: #333; /* Dark background */
+    			color: #65bb60; /* Light green text */
+    			padding: 40px 0;
+    			text-align: center;
+			}
+
+			#custom-banner .content {
+  				max-width: 800px;
+   				margin: 0 auto;
+			}
+
+			#custom-banner h1 {
+    			font-size: 5em;
+    			margin-bottom: 0.5em;
+				color: #65bb60; /* Light green text */
+			}
+
+			#custom-banner h2 {
+    			font-size: 3em;
+    			margin-top: -1em;
+				color: #65bb60; /* Light green text */
+			}
+		</style>
 	</head>
 	<body class="homepage is-preload">
+		
+<body>
+    <header id="header">
+        <div class="logo container">
+            <div>
+                <h1><a href="index.html" id="logo"></a></h1> /* add a title for navbar */
+            </div>
+        </div>
+    </header>
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -26,6 +60,7 @@
 
 			<!-- Nav -->
 			<nav id="nav">
+				
 				<ul>
 					<li class="current"><a href="index.html">Home</a></li>
 					<li><a href="requirements.html">Requirements</a></li>
@@ -39,14 +74,19 @@
 					<li><a href="appendices.html">Appendices</a></li>
 					<li><a href="blog.html">blog</a></li>
 				</ul>
+				
 			</nav>
 
 			<!-- Banner -->
 				<section id="banner">
 					<div class="content">
-						<h2>ALONE. LOST. DISREGARDED.</h2>
+						<h2>What3Words for Digital Accessibility</h2>
+		
+						<h2> </h2>
+						<a href="#main" class="button scrolly">Explore</a>
 					</div>
 				</section>
+
 
 			<!-- Main -->
 				<section id="main">
@@ -214,7 +254,7 @@
 														<p>
 															These last 2 weeks, we worked really hard developing the HCI report. In weeks 1 and 2, we planned to engage with clients and advisors including Soundscape, Nick, GDI Hub Lab, and Balquis. Our discussions focused on developing a database/website where users can upload photos and objects to enhance our data layer. We considered mechanisms to ensure user trustworthiness and explored the integration of What3words, with Balquis pointing us to relevant datasets. We expect data contributions from Team 15 by January. Our plans include working on an outdoor layer with hot and cold warnings, and developing basic frontend features for authentication and authorization. Lastly, we clarified that DEAN is the client.
 														</p>
-														<a href="#" class="button">Continue Reading</a>
+														<a href="/blog/no-sidebar.html" class="button">Continue Reading</a>
 													</article>
 								
 												</div>
@@ -340,6 +380,16 @@
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 		<script src="assets/js/animate_scroll.js"></script>
+		<script src="assets/js/blur_in.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.scrolly').scrolly({
+					offset: function() { return 100; }, // Adjust the offset value as needed
+					speed: 1000, // Adjust the speed value for smooth scrolling
+					easing: 'swing' // Easing function for smooth scrolling
+				});
+			});
+		</script>
 	
 	</body>
 </html>

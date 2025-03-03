@@ -5,6 +5,106 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* General Layout & Container */
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Blog Post Grid Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Individual Blog Post Card */
+.box.feature {
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    border: 3px solid #6bbf59;
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    max-width: 400px;
+    width: 100%;
+    flex: 1;
+}
+
+/* Image Styling - Bigger & Cleaner */
+.box.feature .image.featured img {
+    width: 100%;
+    height: 200px; /* Adjust height */
+    object-fit: cover; /* Ensures images look clean */
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Blog Post Title */
+.box.feature h3 {
+    font-size: 22px;
+    margin: 15px 0;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Blog Post Links */
+.box.feature h3 a {
+    text-decoration: none;
+    color: #4aa34a;
+    transition: color 0.3s ease-in-out;
+}
+
+.box.feature h3 a:hover {
+    color: #2f7a2f;
+}
+
+/* Blog Post Description */
+.box.feature p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    padding: 0 15px;
+}
+
+/* Hover Effects */
+.box.feature:hover {
+    border-color: #4aa34a;
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.box.feature:hover .image.featured img {
+    transform: scale(1.2);
+}
+
+/* Grid Layout - 3 Per Row */
+@media screen and (min-width: 1025px) {
+    .col-3 {
+        flex: 0 0 30%; /* 3 per row */
+    }
+}
+
+/* Responsive Grid - 2 Per Row on Tablets */
+@media screen and (max-width: 1024px) {
+    .col-3 {
+        flex: 0 0 48%;
+    }
+}
+
+/* Responsive Grid - 1 Per Row on Mobile */
+@media screen and (max-width: 768px) {
+    .col-3 {
+        flex: 0 0 100%;
+    }
+}
+
+
+    </style>
 </head>
 <body class="is-preload">
     <div id="page-wrapper">
@@ -13,7 +113,7 @@
         <header id="header">
             <div class="logo container">
                 <div>
-                    <h1><a href="index.html" id="logo">TXT</a></h1>
+                    <h1><a href="index.html" id="logo"></a></h1>
                     <p>A responsive site template by HTML5 UP</p>
                 </div>
             </div>
