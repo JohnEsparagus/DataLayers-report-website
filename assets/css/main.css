@@ -3031,37 +3031,134 @@ ul.special li a .label {
 
 	}
 
-/* Custom CSS */
+
+	@keyframes slideIn {
+		from {
+			transform: translateX(-100%);
+			opacity: 0;
+		}
+		to {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+	
+	@keyframes blurIn {
+		from {
+			filter: blur(5px);
+			opacity: 0;
+		}
+		to {
+			filter: blur(0);
+			opacity: 1;
+		}
+	}
+	
+	.slide-in {
+		animation: slideIn 1s ease-out forwards;
+	}
+	
+	.blur-in {
+		animation: blurIn 1s ease-out forwards;
+	}
+	
+	.collapsible {
+		cursor: pointer;
+		background-color: #c4e0bd;
+		color: #333;
+		padding: 10px;
+		border: none;
+		text-align: center;
+		outline: none;
+		font-size: 1.25em;
+		transition: background-color 0.3s ease;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1em;
+		justify-content: center;
+	
+	}
+	
+	.collapsible:hover {
+		background-color: #b1ddab;
+	}
+	
+	.content {
+		padding: 0 18px;
+		display: block; /* Change this from 'none' to 'block' */
+		overflow: hidden;
+		background-color: #f9f9f9;
+		border-left: 5px solid #c4e0bd;
+		margin-bottom: 1em;
+	}
+	
+	.tabs {
+		display: flex;
+		cursor: pointer;
+		margin-bottom: 1em;
+		justify-content: center;
+		border-bottom: 1px solid #c1cac5;
+		text-align: center;
+		}
+		.tabs a {
+			padding: 10px 20px;
+			background: #e7eae8;
+			border: 1px solid #c1cac5;
+			border-bottom: none;
+			margin-right: 5px;
+			text-decoration: none;
+			color: inherit;
+			display: inline-block;
+		}
+		.tabs a.active {
+			background: #c4e0bd;
+			border-bottom: 1px solid #fff;
+		}
+		.tab-content .tab-pane {
+			display: none;
+			visibility: hidden;
+	
+		}
+		.tab-content .tab-pane.active {
+			display: block;
+			visibility: visible;
+		}
+	
+		.interview-text p {
+		margin-bottom: 0.5em;
+			}
+		.interview-text {
+			border-bottom: 1px solid #c1cac5;
+			padding-bottom: 1em;
+		}
+		.question {
+			font-weight: bold;
+		}
+		.answer {
+			margin-left: 1.5em;
+			}
 
 
-
-
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes blurIn {
-    from {
-        filter: blur(5px);
-        opacity: 0;
-    }
-    to {
-        filter: blur(0);
-        opacity: 1;
-    }
-}
-
-.slide-in {
-    animation: slideIn 1s ease-out forwards;
-}
-
-.blur-in {
-    animation: blurIn 1s ease-out forwards;
-}
+		/* This is for small text below images
+		<figure class="image-container">
+    		<img class="image-style" src="your-image.jpg" alt="Image">
+    		<figcaption class="image-caption">ppp</figcaption>
+		</figure>
+		
+		*/
+		.image-container {
+			text-align: center;
+		}
+		
+		.image-style {
+			max-width: 50%;
+			height: auto;
+			display: block;
+			margin: auto;
+		}
+		
+		.image-caption {
+			font-size: 12px; /* Small text */
+			color: gray;
+			margin-top: 5px;
+		}

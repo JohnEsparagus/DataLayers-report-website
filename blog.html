@@ -7,104 +7,101 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
         /* General Layout & Container */
-.container {
-    max-width: 1300px;
-    margin: auto;
-    padding: 40px 20px;
-}
+        .container {
+            max-width: 1300px;
+            margin: auto;
+            padding: 40px 20px;
+        }
 
-/* Blog Post Grid Layout */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-}
+        /* Blog Post Grid Layout */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
 
+        /* Individual Blog Post Card */
+        .box.feature {
+            background: linear-gradient(135deg, #ffffff, #f9f9f9);
+            border: 3px solid #6bbf59;
+            border-radius: 30px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            max-width: 400px;
+            width: 100%;
+            flex: 1;
+        }
 
-/* Individual Blog Post Card */
-.box.feature {
-    background: linear-gradient(135deg, #ffffff, #f9f9f9);
-    border: 3px solid #6bbf59;
-    border-radius: 30px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
-    max-width: 400px;
-    width: 100%;
-    flex: 1;
-}
+        /* Image Styling - Bigger & Cleaner */
+        .box.feature .image.featured img {
+            width: 100%;
+            height: 200px; /* Adjust height */
+            object-fit: cover; /* Ensures images look clean */
+            border-radius: 12px;
+            transition: transform 0.3s ease-in-out;
+        }
 
-/* Image Styling - Bigger & Cleaner */
-.box.feature .image.featured img {
-    width: 100%;
-    height: 200px; /* Adjust height */
-    object-fit: cover; /* Ensures images look clean */
-    border-radius: 12px;
-    transition: transform 0.3s ease-in-out;
-}
+        /* Blog Post Title */
+        .box.feature h3 {
+            font-size: 22px;
+            margin: 15px 0;
+            font-weight: bold;
+            color: #333;
+        }
 
-/* Blog Post Title */
-.box.feature h3 {
-    font-size: 22px;
-    margin: 15px 0;
-    font-weight: bold;
-    color: #333;
-}
+        /* Blog Post Links */
+        .box.feature h3 a {
+            text-decoration: none;
+            color: #4aa34a;
+            transition: color 0.3s ease-in-out;
+        }
 
-/* Blog Post Links */
-.box.feature h3 a {
-    text-decoration: none;
-    color: #4aa34a;
-    transition: color 0.3s ease-in-out;
-}
+        .box.feature h3 a:hover {
+            color: #2f7a2f;
+        }
 
-.box.feature h3 a:hover {
-    color: #2f7a2f;
-}
+        /* Blog Post Description */
+        .box.feature p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            padding: 0 15px;
+        }
 
-/* Blog Post Description */
-.box.feature p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.8;
-    padding: 0 15px;
-}
+        /* Hover Effects */
+        .box.feature:hover {
+            border-color: #4aa34a;
+            transform: translateY(-5px) scale(1.04);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
 
-/* Hover Effects */
-.box.feature:hover {
-    border-color: #4aa34a;
-    transform: translateY(-5px) scale(1.04);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-}
+        .box.feature:hover .image.featured img {
+            transform: scale(1.2);
+        }
 
-.box.feature:hover .image.featured img {
-    transform: scale(1.2);
-}
+        /* Grid Layout - 3 Per Row */
+        @media screen and (min-width: 1025px) {
+            .col-3 {
+                flex: 0 0 30%; /* 3 per row */
+            }
+        }
 
-/* Grid Layout - 3 Per Row */
-@media screen and (min-width: 1025px) {
-    .col-3 {
-        flex: 0 0 30%; /* 3 per row */
-    }
-}
+        /* Responsive Grid - 2 Per Row on Tablets */
+        @media screen and (max-width: 1024px) {
+            .col-3 {
+                flex: 0 0 48%;
+            }
+        }
 
-/* Responsive Grid - 2 Per Row on Tablets */
-@media screen and (max-width: 1024px) {
-    .col-3 {
-        flex: 0 0 48%;
-    }
-}
-
-/* Responsive Grid - 1 Per Row on Mobile */
-@media screen and (max-width: 768px) {
-    .col-3 {
-        flex: 0 0 100%;
-    }
-}
-
-
+        /* Responsive Grid - 1 Per Row on Mobile */
+        @media screen and (max-width: 768px) {
+            .col-3 {
+                flex: 0 0 100%;
+            }
+        }
     </style>
 </head>
 <body class="is-preload">
@@ -152,44 +149,30 @@
                                     <div class="col-3 col-6-medium col-12-small">
                                         <!-- Feature -->
                                         <section class="box feature">
-                                            <a href="blog/no-sidebar.html" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-                                            <h3><a href="blog/no-sidebar.html">Blog Post 1</a></h3>
+                                            <a href="blog/blog8.html" class="image featured"><img src="images/blog_pics/studentTesting.jpeg" alt="" /></a>
+                                            <h3><a href="blog/blog8.html">Blog Post 8</a></h3>
                                             <p>
-                                                Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
-                                                lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
+                                                We had school kids test our product, providing valuable feedback on design features. We focused on getting the product ready for clients.
                                             </p>
                                         </section>
                                     </div>
                                     <div class="col-3 col-6-medium col-12-small">
                                         <!-- Feature -->
                                         <section class="box feature">
-                                            <a href="blog/blog2.html" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-                                            <h3><a href="blog/blog2.html">Blog Post 2</a></h3>
+                                            <a href="blog/blog7.html" class="image featured"><img src="images\blog_pics\amir_lenart.jpeg" alt="" /></a>
+                                            <h3><a href="blog/blog7.html">Blog Post 7</a></h3>
                                             <p>
-                                                Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
-                                                lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
+                                                During reading week, we took a break and focused on completing the report website. The widget had various functionalities, including different color modes.
                                             </p>
                                         </section>
                                     </div>
                                     <div class="col-3 col-6-medium col-12-small">
                                         <!-- Feature -->
                                         <section class="box feature">
-                                            <a href="blog/blog3.html" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-                                            <h3><a href="blog/blog3.html">Blog Post 3</a></h3>
+                                            <a href="blog/blog6.html" class="image featured"><img src="images\blog_pics\widget_in_barclays.jpeg" alt="" /></a>
+                                            <h3><a href="blog/blog6.html">Blog Post 6</a></h3>
                                             <p>
-                                                Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
-                                                lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
-                                            </p>
-                                        </section>
-                                    </div>
-                                    <div class="col-3 col-6-medium col-12-small">
-                                        <!-- Feature -->
-                                        <section class="box feature">
-                                            <a href="blog/blog4.html" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-                                            <h3><a href="blog/blog4.html">Blog Post 4</a></h3>
-                                            <p>
-                                                Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
-                                                lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
+                                                We submitted an online presentation, which went well, and received valuable feedback from Sheena Visram. We focused on optimizing the user journey.
                                             </p>
                                         </section>
                                     </div>
@@ -199,41 +182,47 @@
                                             <a href="blog/blog5.html" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
                                             <h3><a href="blog/blog5.html">Blog Post 5</a></h3>
                                             <p>
-                                                Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
-                                                lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
+                                                We made significant progress on the frontend and backend. Eric created a sleek front end to view the database, Amir developed a mock widget application.
                                             </p>
                                         </section>
                                     </div>
                                     <div class="col-3 col-6-medium col-12-small">
                                         <!-- Feature -->
                                         <section class="box feature">
-                                            <a href="blog/blog6.html" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-                                            <h3><a href="blog/blog6.html">Blog Post 6</a></h3>
+                                            <a href="blog/blog4.html" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+                                            <h3><a href="blog/blog4.html">Blog Post 4</a></h3>
                                             <p>
-                                                Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
-                                                lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
+                                                We locked in on technical development, focusing on core features and additional functionalities. We developed a comprehensive database for urban accessibility.
                                             </p>
                                         </section>
                                     </div>
                                     <div class="col-3 col-6-medium col-12-small">
                                         <!-- Feature -->
                                         <section class="box feature">
-                                            <a href="blog/blog7.html" class="image featured"><img src="images/pic07.jpg" alt="" /></a>
-                                            <h3><a href="blog/blog7.html">Blog Post 7</a></h3>
+                                            <a href="blog/blog3.html" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+                                            <h3><a href="blog/blog3.html">Blog Post 3</a></h3>
                                             <p>
-                                                Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
-                                                lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
+                                                We approached our software engineering deadline, focusing on database visualization and backend development. We also worked on a prototype of the widget.
                                             </p>
                                         </section>
                                     </div>
                                     <div class="col-3 col-6-medium col-12-small">
                                         <!-- Feature -->
                                         <section class="box feature">
-                                            <a href="blog/blog8.html" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-                                            <h3><a href="blog/blog8.html">Blog Post 8</a></h3>
+                                            <a href="blog/blog2.html" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+                                            <h3><a href="blog/blog2.html">Blog Post 2</a></h3>
                                             <p>
-                                                Phasellus quam turpis, feugiat sit amet ornare in, a hendrerit in
-                                                lectus dolore. Praesent semper mod quis eget sed etiam eu ante risus.
+                                                By December 10th, we aimed to complete several key tasks. Despite being busy with coursework from other modules, we clarified our project requirements.
+                                            </p>
+                                        </section>
+                                    </div>
+                                    <div class="col-3 col-6-medium col-12-small">
+                                        <!-- Feature -->
+                                        <section class="box feature">
+                                            <a href="blog/no-sidebar.html" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+                                            <h3><a href="blog/no-sidebar.html">Blog Post 1</a></h3>
+                                            <p>
+                                                In the first two weeks, we focused on developing the HCI report and engaging with clients and advisors, including Soundscape, Nick, GDI Hub Lab, and Balquis.
                                             </p>
                                         </section>
                                     </div>

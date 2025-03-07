@@ -6,109 +6,423 @@
 -->
 <html>
 	<head>
-		<title>UI Design</title>
+		<title>UI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+		<style>
+			.custom-icon-list {
+				list-style: none;
+				padding-left: 0;
+			}
+	
+			.custom-icon-list li {
+				position: relative;
+				padding-left: 25px;
+				margin-bottom: 1em;
+			}
+	
+			.custom-icon-list li:before {
+				content: '\f061'; /* FontAwesome check icon */
+				font-family: 'Font Awesome 5 Free';
+				font-weight: 900;
+				position: absolute;
+				left: 0;
+				top: 0;
+				color: #006376;
+			}
+	
+			.sketch-tabs {
+				display: flex;
+				cursor: pointer;
+				margin-bottom: 2em;
+				justify-content: center;
+				border-bottom: 2px solid #8db882;
+				text-align: center;
+			}
+
+	
+			.sketch-tabs a {
+				padding: 15px 30px;
+				background: #f9f9f9;
+				border: 2px solid #8db882;
+				border-bottom: none;
+				margin-right: 10px;
+				text-decoration: none;
+				color: #333;
+				display: inline-block;
+				transition: all 0.3s ease;
+				border-radius: 10px 10px 0 0;
+				font-weight: bold;
+			}
+	
+			.sketch-tabs a.active,
+			.sketch-tabs a:hover {
+				background: #8db882;
+				color: #fff;
+				transform: translateY(-5px);
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+			}
+	
+			.sketch-content .sketch-pane {
+				display: none;
+				visibility: hidden;
+				opacity: 0;
+				transition: opacity 0.3s ease;
+			}
+	
+			.sketch-content .sketch-pane.active {
+				display: flex;
+				visibility: visible;
+				opacity: 1;
+				align-items: center;
+				gap: 100px;
+				padding: 20px;
+				border: 2px solid #8db882;
+				border-top: none;
+				background: #f9f9f9;
+				border-radius: 0 0 10px 10px;
+			}
+
+			.sketch-content .sketch-pane.active p {
+    			font-size: 25px; /* Adjust the size as needed */
+				margin: 0;
+				line-height: 1.6;
+				color: #333;
+			}
+	
+			.sketch-content img {
+				height: auto;
+				border-radius: 8px;
+				max-width: 25%;
+			}
+
+			.sketch-content .big_image{
+				height: auto;
+				border-radius: 8px;
+				max-width:50%;
+			}
+
+			.medium-image{
+				height: auto;
+				border-inline: 2px solid #8db882;
+				border-color: #8db882;
+				max-width: 100%;
+			}
+	
+		</style>
 	</head>
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
-
 			<!-- Header -->
-				<header id="header">
-					<div class="logo container">
-						<div>
-							<h1><a href="index.html" id="logo">Project Title</a></h1>
-							<p>Data Layers for Accessibility</p>
-						</div>
+			<header id="header">
+				<div class="logo container">
+					<div>
+						<h1><a href="index.html" id="logo"></a></h1>
+						<p>Data Layers for Accessibility</p>
 					</div>
-				</header>
+				</div>
+			</header>
 
 			<!-- Nav -->
 			<nav id="nav">
 				<ul>
 					<li><a href="index.html">Home</a></li>
-					<li><a href="requirements.html">Requirements</a></li>
+					<li class="current"><a href="requirements.html">Requirements</a></li>
 					<li><a href="research.html">Research</a></li>
 					<li><a href="algorithms.html">Algorithms</a></li>
-					<li class="current"><a href="ui_design.html">UI Design</a></li>
+					<li><a href="ui_design.html">UI Design</a></li>
 					<li><a href="system_design.html">System Design</a></li>
 					<li><a href="implementation.html">Implementation</a></li>
 					<li><a href="testing.html">Testing</a></li>
 					<li><a href="evaluation.html">Evaluation</a></li>
 					<li><a href="appendices.html">Appendices</a></li>
-					<li><a href="blog.html">blog</a></li>
+					<li><a href="blog.html">Blog</a></li>
 				</ul>
 			</nav>
 
 			<!-- Main -->
-				<section id="main">
-					<div class="container">
-						<h2 class="major"><span>UI Design</span></h2>
-						<section class="box highlight">
-							<h3>Design Principles</h3>
-							<p>Discuss the design principles such as simplicity, consistency, visibility, feedback, tolerance, etc.</p>
-							<img src="images/design_principles.jpg" alt="Design Principles" class="image featured">
-						</section>
-						<section class="box highlight">
-							<h3>Hand-drawn Sketches</h3>
-							<p>Include hand-drawn sketches of the UI design.</p>
-							<img src="images/sketch1.jpg" alt="Sketch 1" class="image featured">
-							<img src="images/sketch2.jpg" alt="Sketch 2" class="image featured">
-						</section>
-						<section class="box highlight">
-							<h3>Online Interactive Wireframe</h3>
-							<p>Provide the URL to the online interactive wireframe (e.g., Figma).</p>
-							<a href="https://www.figma.com" class="button">View Wireframe</a>
-						</section>
-					</div>
-				</section>
-
-			<!-- Footer -->
-				<footer id="footer">
-					<div class="container">
-						<div class="row gtr-200">
-							<div class="col-12">
-
-
+			<section id="main">
+				<div class="container">
+					<h2 class="major"><span>UI Design</span></h2>
+					<section class="blur-in-trigger hidden">
+						<h2><strong>Design Principles</strong></h2>
+					</section>
+					<section class="blur-in-trigger hidden">
+						<h2><strong>Sketches - 1</strong></h2>
+						<p>These are the sketches of the planned interface for the mobile application. The ideas behind
+							these sketches are derived from the key requirements that were identified from the stakeholders
+							earlier, as well as the personas that were crafted to identify the target user base of the app.
+							The sketches are designed to be simple and intuitive, with a focus on accessibility and ease of
+							use. 
+			
+						</p>
+						<div class="sketch-tabs" id="sketch-tabs-1">
+							<a href="#" data-sketch="sketch1-1" class="active">Navigation Page</a>
+							<a href="#" data-sketch="sketch1-2">Saved Locations</a>
+							<a href="#" data-sketch="sketch1-3">Profile</a>
+							<a href="#" data-sketch="sketch1-4">Home</a>
+						</div>
+						
+						<div class="sketch-content" id="sketch-content-1">
+							<div id="sketch1-1" class="sketch-pane active">
+								<img src="images/sketch1_1.png" alt="Sketch 1">
+								<p>The navigation page
+									(accessed by the menu
+									button on the top right),
+									allows the user to navigate
+									to different pages</p>
 							</div>
-							<div class="col-12">
+							<div id="sketch1-2" class="sketch-pane">
+								<img src="images/sketch1_2.png" alt="Sketch 2">
+								<p>A page that displays all the
+									locations that the user has
+									saved with the unique
+									three word identifications</p>
+							</div>
+							<div id="sketch1-3" class="sketch-pane">
+								<img src="images/sketch1_3.png" alt="Sketch 3">
+								<p>User's profile page with personal
+									information and a list of reviews
+									they have made on different
+									accessible locations with
+									information on how (and if) those
+									reviews have been addressed</p>
+							</div>
+							<div id="sketch1-4" class="sketch-pane"> <!-- Added Sketch 4 Pane -->
+								<img src="images/sketch1_4.png" alt="Sketch 4">
+								<p>The home page, consisting of the map of nearby area and
+									the user's current location. The user can select different data
+									layers (outdoor, indoor or warnings) and filter the icons on
+									the map as well as search for specific premises</p>
+							</div>
+						</div>
+					</section>
 
-								<!-- Contact -->
-									<section>
-										<h2 class="major"><span>Get in touch</span></h2>
-										<ul class="contact">
-											<li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
-											<li><a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a></li>
-											<li><a class="icon brands fa-instagram" href="#"><span class="label">Instagram</span></a></li>
-											<li><a class="icon brands fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
-											<li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
-										</ul>
-									</section>
+					<section class="blur-in-trigger hidden">
+						<h2><strong>Improved Sketches</strong></h2>
+						<p>Upon gathering feedback, we decided to proceed with this set of sketches (sketches 2). The
+							users informed us that this version has much more intuitive UI and provides an overall better
+							user experience which is more attuned of people with accessibility needs.</p>
+						<div class="sketch-tabs" id="sketch-tabs-2">
+							<a href="#" data-sketch="sketch2-1" class="active">Login</a>
+							<a href="#" data-sketch="sketch2-2">Saved Locations</a>
+							<a href="#" data-sketch="sketch2-3">Profile</a>
+							<a href="#" data-sketch="sketch2-4">Home</a>
+						</div>
+						
+						<div class="sketch-content" id="sketch-content-2">
+							<div id="sketch2-1" class="sketch-pane active">
+								<img src="images/sketch2_1.png" alt="Sketch 1">
+								<p>The welcome page where the
+									user can authenticate (sign
+									up or sign in if an account
+									already exists)</p>
+							</div>
+							<div id="sketch2-2" class="sketch-pane">
+								<img src="images/sketch2_2.png" alt="Sketch 2">
+								<p>The locations are distinguished more
+									clearly, with a benefit to visually
+									impaired people
+									<br>
+									<br>
+									The navigation panel at the bottom allows
+									users to navigate between pages
+									seamlessly with one less click than the
+									previous sketches. This is a more accessible
+									design for those with disabilities, as
+									mentioned to us in the feedback</p>
+							</div>
+							<div id="sketch2-3" class="sketch-pane">
+								<img src="images/sketch2_3.png" alt="Sketch 3">
+								<p>All of the reviews have a clearer status,
+									and the user profile stands out more
+									with clearer and distinctive information</p>
+							</div>
+							<div id="sketch2-4" class="sketch-pane">
+								<img src="images/sketch2_4.png" alt="Sketch 4">
+								<p>The map is expandable in this sketch (the
+									button on its top right corner)</p>
+							</div>
+						</div>
+					</section>
 
+					<section class="blur-in-trigger hidden">
+						<h2><strong>Prototype</strong></h2>
+						<p>			
+							Our product is designed to be used by people with disabilities, so it is important that the content
+							is dynamic and available on all platofrms, and can be used on a webpage or a mobile application, or even desktop.
+							Exploring the design of our product in the sketches and evaluation, a widget that companies can embed in their webpage
+							is more accessible than mobile application, as psychological overhead is reduced.
+							<br><br>
+							Additionally QR Codes outside organisations using our widget can be used to launch applications rapidly.
+
+							<br><br>
+							We used Figma to build a prototype to explore our sketch in greater depth and evaluate its user
+							experience and practicality. The pictures are the mobile web page with necessary features and
+							specifications. The blue arrows show the navigation of pages when you use the widgets of the
+							web page.</p>
+						<div class="sketch-tabs" id="sketch-tabs-3">
+							<a href="#" data-sketch="prototype1-1" class="active">Data Layers</a>
+							<a href="#" data-sketch="prototype1-2">Prototype 2</a>
+						</div>
+
+						
+						<div class="sketch-content" id="sketch-content-3">
+							<div id="prototype1-1" class="sketch-pane active">
+								<img src="images/prototype1_1.png" class="big_image alt="Prototype 1">
+								<p>An option to enable and disable data layers (outdoor and indoor), download the database and datalayers.</p>
+							</div>
+							<div id="prototype1-2" class="sketch-pane">
+								<img src="images/prototype1_2.png" alt="Prototype 2">
+								<p>A simple widget, guiding the user to nearby data layers, clicking on the pins links you to their google maps location</p>
+							</div>
+						</div>
+					</section>
+
+					<section><img class="medium-image" src="images/prototypeEval.png"></img></section>
+
+					<section class="blur-in-trigger hidden">
+						<h2><strong>Improved prototype</strong></h2>
+						<p>After evaluating the first prototype, we went on to redesign our prototype based on the
+							evaluation result we have made. The green arrows represent the changes made and blue
+							arrows represent new navigations.</p>
+						<div class="sketch-tabs" id="sketch-tabs-4">
+							<a href="#" data-sketch="prototype2-1" class="active">Prototype 1</a>
+							<a href="#" data-sketch="prototype2-2">Prototype 2</a>
+							<a href="#" data-sketch="prototype2-3">Prototype 3</a>
+						</div>
+
+						
+						<div class="sketch-content" id="sketch-content-4">
+							<div id="prototype2-1" class="sketch-pane active">
+								<img src="images/prototype2_1.png" class="big_image alt="Prototype 1">
+								<p>Prototype 1 description goes here.</p>
+							</div>
+							<div id="prototype2-2" class="sketch-pane">
+								<img src="images/prototype2_2.png" alt="Prototype 2">
+								<p>Data is differentiated in
+									interface by various
+									types of data layer and
+									not just by outdoor and
+									indoor layer <br><br> AUDIO
+									INPUT</p>
+							</div>
+							<div id="prototype2-3" class="sketch-pane">
+								<img src="images/prototype2_3.png" alt="Prototype 3">
+								<p>Prototype 3 description goes here.</p>
 							</div>
 						</div>
 
-						<!-- Copyright -->
-							<div id="copyright">
-								<ul class="menu">
-									<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</section>
+
+					<section>
+						<div>
+							<h3>Feedback</h3>
+							<p>Feedback from the users was positive, with the majority of users finding the interface
+								intuitive and easy to use. The users appreciated the simplicity of the design and the
+								straightforward navigation. The users also found the interface to be accessible and
+								inclusive, with features that cater to a wide range of users, including those with
+								disabilities. The users also appreciated the visual design of the interface, with many
+								commenting on the clean and modern look of the app. Overall, the feedback from the users
+								was very positive, with many users expressing a desire to use the app in the future.</p>
+
+						</div>
+					</section>
+					<section>
+						<div>
+							<h3>Final Design</h3>
+							<img src="images/final_design.png" title="INSERT FINAL UI HERE" class="big_image"></img>
+							<p>After gathering feedback from the users and evaluating the prototypes, we have come up with
+								the final design for the mobile application. The final design incorporates the feedback
+								from the users and the improvements made to the prototypes. The final design is simple,
+								intuitive, and accessible, with a focus on providing a positive user experience for all
+								users, including those with
+
+						</div>
+					</section>
+				</div>
+			
+				
+			</section>
+			
+			<section class="box highlight">
+				<h3>References</h3>
+				<p>IEEE style: reference definition needs the number. IEEE citation reference definition.</p>
+				<img src="../images/references.jpg" alt="References" class="image-featured">
+				<p><strong>Reference 1:</strong> [1] H. Sharp, J. Preece, and Y. Rogers, Interaction Design: Beyond Human-Computer Interaction, 5th ed. Wiley, 2019. Accessed: Nov. 5, 2024. [Online]. Available: https://search-ebscohost-com.libproxy.ucl.ac.uk/login.aspx?direct=true&AuthType=ip,shib&db=nlebk&AN=2097340&site=ehost-live&scope=site</p>
+				<p><strong>Reference 2:</strong> [2] Microsoft, "Microsoft Soundscape," Microsoft, 2024. Accessed: Nov. 5, 2024. [Online]. Available: https://www.microsoft.com/en-us/research/product/soundscape/</p>
+				<p><strong>Reference 3:</strong> [3] "Building an App for Blind People: A Step-by-Step Guide to Creating Accessible and User-Friendly Navigation App," Interexy, [Online]. Available: https://interexy.com/building-app-for-blind-people-a-step-by-step-guide-to-creating-accessible-and-user-friendly-navigation-app/. [Accessed: 5-Nov-2024].</p>
+				<p><strong>Reference 4:</strong> [4] J. Nielsen, "10 Usability Heuristics for User Interface Design," Nielsen Norman Group, 1994. [Online]. Available: https://www.nngroup.com/articles/ten-usability-heuristics/. [Accessed: 5-Nov-2024]</p>
+				<p><strong>Reference 5:</strong> [5] Wheelmap, "Wheelmap: Find and Share Accessible Places," [Online]. Available: https://wheelmap.org/en/. [Accessed: 5-Nov-2024].</p>
+			</section>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<div class="row gtr-200">
+						<div class="col-12">
+							<!-- Contact -->
+							<section>
+								<h2 class="major"><span>Get in touch</span></h2>
+								<ul class="contact">
+									<li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
+									<li><a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a></li>
+									<li><a class="icon brands fa-instagram" href="#"><span class="label">Instagram</span></a></li>
+									<li><a class="icon brands fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
+									<li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
 								</ul>
-							</div>
-
+							</section>
+						</div>
 					</div>
-				</footer>
 
+					<!-- Copyright -->
+					<div id="copyright">
+						<ul class="menu">
+							<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
+				</div>
+			</footer>
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/animate_scroll.js"></script>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				function setupTabs(tabContainerId, contentContainerId) {
+					const tabs = document.querySelectorAll(`#${tabContainerId} a`);
+					const panes = document.querySelectorAll(`#${contentContainerId} .sketch-pane`);
+	
+					tabs.forEach(tab => {
+						tab.addEventListener('click', function (event) {
+							event.preventDefault();
+							const targetSketch = this.getAttribute('data-sketch');
+	
+							// Remove active class from all tabs and panes
+							tabs.forEach(t => t.classList.remove('active'));
+							panes.forEach(pane => pane.classList.remove('active'));
+	
+							// Add active class to the clicked tab and corresponding pane
+							this.classList.add('active');
+							document.getElementById(targetSketch).classList.add('active');
+						});
+					});
+				}
+	
+				setupTabs('sketch-tabs-1', 'sketch-content-1');
+				setupTabs('sketch-tabs-2', 'sketch-content-2');
+				setupTabs('sketch-tabs-3', 'sketch-content-3');
+				setupTabs('sketch-tabs-4', 'sketch-content-4');
+			});
+		</script>
 	</body>
 </html>
