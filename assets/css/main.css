@@ -3031,6 +3031,7 @@ ul.special li a .label {
 
 	}
 
+	/* animation slide blur*/
 
 	@keyframes slideIn {
 		from {
@@ -3061,7 +3062,7 @@ ul.special li a .label {
 	.blur-in {
 		animation: blurIn 1s ease-out forwards;
 	}
-	
+	/* This is for the collapsible content all across the  CSS*/
 	.collapsible {
 		cursor: pointer;
 		background-color: #c4e0bd;
@@ -3092,6 +3093,10 @@ ul.special li a .label {
 		margin-bottom: 1em;
 	}
 	
+	/* This is for the tabs CSS in REQUIREMENTS */
+		.tabs .tab-content {
+		display: block;
+		}
 	.tabs {
 		display: flex;
 		cursor: pointer;
@@ -3162,3 +3167,73 @@ ul.special li a .label {
 			color: gray;
 			margin-top: 5px;
 		}
+
+		/* This is for APPENDICES*/
+		        /* Custom Styles for Appendices */
+				.appendices-section {
+					margin: 2em 0;
+					padding: 1.5em;
+					background: linear-gradient(135deg, #f9f9f9, #c4e0bd);
+					border-radius: 12px;
+					box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+					transition: transform 0.3s ease, box-shadow 0.3s ease;
+				}
+		
+				.appendices-section:hover {
+					transform: translateY(-5px);
+					box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+				}
+		
+				.appendices-section h3 {
+					color: #6b7770;
+					font-size: 1.75em;
+					margin-bottom: 0.5em;
+				}
+		
+				.appendices-section p {
+					color: #6b7770;
+					line-height: 1.8;
+				}
+		
+				.appendices-section img {
+					width: 100%;
+					border-radius: 8px;
+					margin: 1em 0;
+				}
+		
+				.button-container {
+					display: flex;
+					gap: 1em;
+					margin-top: 1.5em;
+				}
+		
+				.button-container a {
+					text-decoration: none;
+					padding: 0.75em 1.5em;
+					background: #c4e0bd;
+					color: rgb(43, 40, 40);
+					border-radius: 6px;
+					transition: background 0.3s ease;
+				}
+		
+				.button-container a:hover {
+					background: #9db696;
+				}
+		
+				.references-section {
+					margin-top: 2em;
+					padding: 1.5em;
+					background: #ecf0f1;
+					border-radius: 12px;
+				}
+		
+				.references-section h3 {
+					color: #2c3e50;
+					font-size: 1.75em;
+					margin-bottom: 0.5em;
+				}
+		
+				.references-section p {
+					color: #555;
+					line-height: 1.8;
+				}
