@@ -30,75 +30,11 @@
 				position: absolute;
 				left: 0;
 				top: 0;
-				color: #006376;
+				color: #92b388;
 				}
 			
-				.tabs {
-            display: flex;
-            cursor: pointer;
-            margin-bottom: 1em;
-            justify-content: center;
-            border-bottom: 1px solid #c1cac5;
-            text-align: center;
-        	}
-        	.tabs a {
-        	    padding: 10px 20px;
-        	    background: #e7eae8;
-        		border: 1px solid #c1cac5;
-        	    border-bottom: none;
-        	    margin-right: 5px;
-        	    text-decoration: none;
-        	    color: inherit;
-        	    display: inline-block;
-        	}
-        	.tabs a.active {
-        	    background: #c4e0bd;
-        	    border-bottom: 1px solid #fff;
-        	}
-        	.tab-content .tab-pane {
-        	    display: none;
-        	    visibility: hidden;
-
-        	}
-        	.tab-content .tab-pane.active {
-        	    display: block;
-        	    visibility: visible;
-        	}
 			.p {
 				text-align: justify;
-			}
-			.interview-text p {
-            margin-bottom: 0.5em;
-        		}
-			.interview-text {
-				border-bottom: 1px solid #c1cac5;
-				padding-bottom: 1em;
-			}
-			.question {
-				font-weight: bold;
-			}
-			.answer {
-				margin-left: 1.5em;
-				}
-			.collapsible {
-				cursor: pointer;
-				background-color: #c4e0bd;
-				color: #333;
-				padding: 10px;
-				border: none;
-				text-align: center;
-				outline: none;
-				font-size: 1.25em;
-				transition: background-color 0.3s ease;
-				display: flex;
-				justify-content: space-between;
-				margin-bottom: 1em;
-				justify-content: center;
-
-			}
-	
-			.collapsible:hover {
-				background-color: #b1ddab;
 			}
 	
 			.content {
@@ -160,53 +96,36 @@
 							<p>Go into the brief history of this project the background.</p>
 								</section>
 								<section class="blur-in-trigger hidden">
-									<h2><strong>Japan walk guide</strong></h2>
-									<p>	Japan Walk Guide is designed to assist individuals ,specifically for those who have mobility issues and provides these users with navigation assistance.
-										Using real-time data it provides a variety of accessibility features such as color coded icons, user submitted photos to verify accessibility and cross platform accessibility. The user input and authentication system allow for newer updates from users, and fosters a community of users that contribute
-										There is also voice assisted navigation for visually impaired users or those who are navigating hands free. Different languages, color schemes and controls for the app are simple ways to increase the accessibility of the app, making big differences for some users.
-										This app demonstrates the importance of designing with the user in mind, catering to diverse needs. Additionally, they have offline functionality, with the option to download data. This solves the challenge of bad connection and is especially relevant in underground tube areas with no connection.
-										It is also very fast to open and launch, using a web application and QR codes around the city to launch the app. .
-										</p>					
-									<img src="..\images\japan_walk.jpg" alt="Japan Walk Guide" class="image-featured">
+									<h2><strong>Japan Walk Guide</strong></h2>
+									<p>Japan Walk Guide is a navigation tool, assisting individuals with mobility challenges navigating urban Japan. There is a big need to help those with accessibility issues in dense urban environments like Tokyo. This web app uses real-time data, and crowd-sourced information and many accessibility features.</p>
+									<p>There is also walking route assistance and surrounding information as you can see in the diagram, with detailed station information.</p>
+									<figure class="image-container">
+										<img class="image-style" src="images\japan_walk.jpg" alt="Japan Walk Guide UI" style="max-width: 100%">
+										<figcaption class="image-caption">Japan Walk Guide UI - 5 Step</figcaption>
+									</figure>
+									<p>This app has accessibility-focused design, with color-coded icons, voice-assisted navigation for hands-free use catering to a diverse portfolio of users. Community-driven updates ensure changes in the environment and reflect real-time, and the app remains up to date at all times. Additionally, the app has offline functionality and works on a variety of platforms. It can be easily launched by scanning a QR code.</p>
+									<p>The app also operates on a similar paradigm of easy access; Users would not download a dedicated app due to psychological barriers of installation, so our embedded widget is very suitable in this scenario.</p>
 									<h3>What we can learn:</h3>
 									<ul class="custom-icon-list">
-										<li><strong>Empower Accessibility:</strong> Empower those with accessibility issues, the ability to move swiftly and confidently around dense cities.</li>
-										<li><strong>Community Platform:</strong> Provide a platform for users to share their experiences and knowledge of the city.</li>
-										<li><strong>Inclusive Widget:</strong> A reliable and inclusive widget developers can use in their websites.</li>
+										<li><i class="fas fa-users"></i> <strong>User-centered Design:</strong> Japan Walk shows the importance of designing with the users in mind. We can adopt a similar approach using a set of design heuristics like a checklist, including visual, auditory, and mobility impairments.</li>
+										<li><i class="fas fa-network-wired"></i> <strong>Community Platform:</strong> Japan Walk relies on user contributions to stay updated, so changes are reflected real-time. We could potentially implement a similar model, allowing users to submit updates.</li>
+										<li><i class="fas fa-route"></i> <strong>Route Guidance:</strong> The app incorporates route guidance and detailed information on locations and congestion, this is very useful and we should think about incorporating a route guidance algorithm.</li>
 									</ul>
 								</section>
 								<section class="blur-in-trigger hidden">
 									<h2><strong>Wheelmap</strong></h2>
-									<p>	Wheelmap.org allows  users to search and view the accessibility status of public places (e.g., restaurants, shops, and public buildings) using a color-coded system (green = fully accessible, yellow = partially accessible, red = not accessible).
-
-										The data is crowd sourced, similar to Japan walk guide.This is a good way to allow for scalability which wheelmap.org has done as it provides information for nearly all  countries. 
-										The interface is also very simple , and it openly shares its data and an ability to search and filter for objects on the map.
-										This is closer to what our widget will function as, although the website doesn't have many accessibility features, which introduces a problem with many of these navigation applications, there needs to be more accessible technology e.g hand free speech recognition, to navigate the UI. 
-										</p>					
-									<p>Main features include:</p>
+									<p>Wheelmap.org allows users to search and view the accessibility status of public places (e.g., restaurants, shops, and public buildings) using a color-coded system (green = fully accessible, yellow = partially accessible, red = not accessible).</p>
+									<figure class="image-container">
+										<img class="image-style" src="images\wheelmap.png" alt="Wheelmap UI" style="max-width: 100%">
+										<figcaption class="image-caption">Wheelmap UI</figcaption>
+									</figure>
+									<p>This is a global platform, delivering reliable and concise information on accessibility.</p>
+									<h3>What we can learn:</h3>
 									<ul class="custom-icon-list">
-										<li><strong>Empower Accessibility:</strong> Empower those with accessibility issues, the ability to move swiftly and confidently around dense cities.</li>
-										<li><strong>Community Platform:</strong> Provide a platform for users to share their experiences and knowledge of the city.</li>
-										<li><strong>Inclusive Widget:</strong> A reliable and inclusive widget developers can use in their websites.</li>
+										<li><i class="fas fa-check-circle"></i> <strong>Simple Intuitive Interface:</strong> Wheelmap has a clean and straightforward interface, we can prioritize simplicity in our design so it's easier to navigate and understand information.</li>
+										<li><i class="fas fa-palette"></i> <strong>Color-coded System:</strong> Color-coded visual cues, and pleasing icon graphics can provide understandable cues on the accessibility status of a location. We will implement this sort of visual cue, to make our UI more intuitive.</li>
+										<li><i class="fas fa-exclamation-triangle"></i> <strong>Lacks Necessary Accessibility Features:</strong> Wheelmap is effective for most people however there is no voice assistance for hands-free, or UI design options for those who have trouble seeing. We can incorporate these to make our product inclusive and user-friendly for those with diverse needs.</li>
 									</ul>
-								</section>
-								<section>
-								<section class="slide-in-trigger hidden">
-									<h2><strong>Requirement Gathering Process</strong></h2>
-									<p>Our goal was to ensure the HCI component met diverse user needs, focusing on accessibility and inclusivity. This section outlines our methods for collecting, analyzing, and prioritizing user requirements.</p>
-									
-									<h4>Methods of Requirement Collection</h4>
-									<p>We conducted semi-structured interviews with software engineers and visually impaired individuals to gather detailed insights into their needs and challenges. Software engineers discussed technical challenges and API requirements, while visually impaired individuals focused on accessibility needs and navigation challenges. Regular consultations with stakeholders helped integrate their feedback and evolving needs into the project.</p>
-								</section>
-								<section>
-									<h2>Personas</h2>
-									<img src="images/persona1.png" alt="Software eng" class="blur-in-trigger hidden">
-									<p>This section will describe the typical users of the project.</p>
-									<img src="images/persona2.png" alt="Disabled Person" class="blur-in-trigger hidden">
-								</section>
-								<section>
-									<h2>Use Cases</h2>
-									<p>This section will include a use case diagram and a list of use cases.</p>
 								</section>
 							</div>
 				</section>

@@ -3084,15 +3084,8 @@ ul.special li a .label {
 		background-color: #b1ddab;
 	}
 	
-	.content {
-		padding: 0 18px;
-		display: block; /* Change this from 'none' to 'block' */
-		overflow: hidden;
-		background-color: #f9f9f9;
-		border-left: 5px solid #c4e0bd;
-		margin-bottom: 1em;
-	}
-	
+
+
 	/* This is for the tabs CSS in REQUIREMENTS */
 		.tabs .tab-content {
 		display: block;
