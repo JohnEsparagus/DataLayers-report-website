@@ -2869,6 +2869,21 @@ ul.special li a .label {
 				transform: translateX(0);
 			}
 
+			.nav-buttons {
+				position: absolute;
+				bottom: 20px;
+				width: 100%;
+				text-align: center;
+			}
+			
+			.nav-buttons .button {
+				display: inline-block;
+				margin: 5px;
+				padding: 10px 20px;
+			   a1cd9b;
+			}
+			
+
 	
 
 /* Small */

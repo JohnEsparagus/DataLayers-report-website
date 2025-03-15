@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <title>Testing</title>
+    <style>
+        
+				.content {
+		padding: 0 18px;
+		display: none; /* Change this from 'none' to 'block' */
+		overflow: hidden;
+		background-color: #f9f9f9;
+		border-left: 5px solid #c4e0bd;
+		margin-bottom: 1em;
+	}
+
+			.p {
+				text-align: justify;
+			}
+    </style>
 </head>
 <body>
     <header id="header">
@@ -27,15 +42,47 @@
             <li class="current"><a href="testing.html">Testing</a></li>
             <li><a href="evaluation.html">Evaluation</a></li>
             <li><a href="appendices.html">Appendices</a></li>
-            <li><a href="blog.html">blog</a></li>
+            <li><a href="blog.html">Blog</a></li>
         </ul>
     </nav>
     <section id="main">
         <div class="container">
-            <h2>Testing Procedures and Results</h2>
-            <p>This is where the content for the testing procedures and results will go.</p>
+            <h2 class="major"><span>Testing</span></h2>
+            <section class="blur-in-trigger hidden">
+                <h2>User Acceeptance testing imrpove this</h2>
+                <p class="p">ILL IMPROVE THIS This section should provide a brief overview of the project and the testing process. It should also include the testing objectives and the scope of the testing process.</p>
+                <button class="collapsible">How would you rate the visual design out of 10?</button>
+                <div class="content blur-in-trigger hidden">
+                    <p>We identified common themes from the interviews, such as location-based application challenges, API flexibility, and frontend requirements.</p>
+                    <img src="images/visual_settings.png" alt="Visual Settings">
+                </div>
+                <button class="collapsible">Rate the ease of use out of 10?</button>
+                <div class="content blur-in-trigger hidden">
+                    <p>We identified common themes from the interviews, such as location-based application challenges, API flexibility, and frontend requirements.</p>
+                    <img src="images/ease_of_use.png" alt="Ease of Use">
+                </div>
+                <button class="collapsible">Is the design consistent?</button>
+                <div class="content blur-in-trigger hidden">
+                    <p>We identified common themes from the interviews, such as location-based application challenges, API flexibility, and frontend requirements.</p>
+                    <img src="images/consistent_design.png" alt="Consistent Design">
+                </div>
+                <button class="collapsible">Do you think adding keyboard shortcuts is a good idea?</button>
+                <div class="content blur-in-trigger hidden">
+                    <p>We identified common themes from the interviews, such as location-based application challenges, API flexibility, and frontend requirements.</p>
+                    <img src="images/keyboard_shortcuts.png" alt="Keyboard Shortcuts">
+                </div>
+            </section>
         </div>
     </section>
+    <section class="box highlight">
+        <h3>References</h3>
+        <p>IEEE style: reference definition needs the number. IEEE citation reference definition.</p>
+        <img src="../images/references.jpg" alt="References" class="image-featured">
+        <p><strong>Reference 1:</strong> [1] Author, "Title," Journal, vol. X, no. X, pp. X-X, Year.</p>
+        <p><strong>Reference 2:</strong> [2] Author, "Title," Journal, vol. X, no. X, pp. X-X, Year.</p>
+        <p><strong>Reference 3:</strong> [3] Author, "Title," Journal, vol. X, no. X, pp. X-X, Year.</p>
+    </section>
+
     <footer id="footer">
         <div class="container">
             <p>&copy; Your Name. All rights reserved.</p>
@@ -48,5 +95,38 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/animate_scroll.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.tabs a');
+        const tabPanes = document.querySelectorAll('.tab-content .tab-pane');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function (event) {
+                event.preventDefault();
+                tabs.forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+                this.classList.add('active');
+                this.setAttribute('aria-selected', 'true');
+                document.querySelector(this.getAttribute('href')).classList.add('active');
+            });
+        });
+
+        const collapsibles = document.querySelectorAll('.collapsible');
+        collapsibles.forEach(collapsible => {
+            collapsible.addEventListener('click', function () {
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>
