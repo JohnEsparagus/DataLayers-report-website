@@ -32,6 +32,56 @@
 				top: 0;
 				color: #006376;
 			}
+
+			.accordion {
+				background-color: #f9f9f9;
+				color: #333;
+				cursor: pointer;
+				padding: 18px;
+				width: 100%;
+				border: none;
+				text-align: left;
+				outline: none;
+				font-size: 18px;
+				transition: background-color 0.4s ease, color 0.4s ease;
+				border-radius: 8px;
+				margin-bottom: 10px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			}
+
+			.accordion:hover {
+				background-color: #e9ecef;
+				color: #006376;
+			}
+
+			.accordion:after {
+				content: '\002B';
+				color: #777;
+				font-weight: bold;
+				float: right;
+				margin-left: 5px;
+				transition: transform 0.4s ease;
+			}
+
+			.accordion.active:after {
+				content: "\2212";
+				transform: rotate(180deg);
+			}
+
+			.panel {
+				padding: 0 18px;
+				background-color: white;
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.4s ease, padding 0.4s ease;
+				border-left: 5px solid #c4e0bd;
+				border-radius: 0 0 8px 8px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			}
+
+			.panel p {
+				margin: 10px 0;
+			}
 	
 			.sketch-tabs {
 				display: flex;
@@ -147,7 +197,103 @@
 				<div class="container">
 					<h2 class="major"><span>UI Design</span></h2>
 					<section class="blur-in-trigger hidden">
-						<h2><strong>Design Principles</strong></h2>
+						<h2><strong>Design Principles AI SLOP gotta make it moree specific to widget</strong></h2>
+						<button class="accordion">Visibility of System Status</button>
+						<div class="panel">
+							<p>The widget should always keep users informed about what is going on through appropriate feedback within a reasonable time.</p>
+							<p>Purpose: Users should never feel lost or confused on where they are going, additionally they shouldn't be misled by outdated information.</p>
+							<p>Implementation:</p>
+							<ul>
+								<li>Display loading indicators during data processing.</li>
+								<li>Show success or error messages after actions (e.g., saving a location).</li>
+								<li>Use progress bars or step indicators for multi-step processes.</li>
+								<li>Show warnings for hazardous locations or outdated accessibility features that may not be there.</li>
+							</ul>
+						</div>
+	
+						<button class="accordion">Match Between System and the Real World</button>
+						<div class="panel">
+							<p>The widget should be in multiple languages, with vocabulary familiar to the user.</p>
+							<p>Purpose: Reduces the learning curve and makes the app more intuitive.</p>
+							<p>Implementation:</p>
+							<ul>
+								<li>Use familiar terms like "Saved Locations" instead of technical jargon.</li>
+								<li>Use icons and labels that are universally understood (e.g., a house icon for "Home").</li>
+								<li>Align workflows with real-world tasks (e.g., saving a location mimics saving a bookmark).</li>
+							</ul>
+						</div>
+	
+						<button class="accordion">User Control and Freedom</button>
+						<div class="panel">
+							<p>Users often perform actions by mistake and need a clearly marked "emergency exit" to leave the unwanted state without having to go through an extended process.</p>
+							<p>Purpose: Gives users confidence to explore the app without fear of making irreversible mistakes.</p>
+							<p>Implementation:</p>
+							<ul>
+								<li>Include "Back" or "Cancel" buttons prominently.</li>
+								<li>Allow users to undo actions (e.g., unsave a location).</li>
+								<li>Provide clear exit points from workflows (e.g., closing a modal or returning to the home screen).</li>
+							</ul>
+						</div>
+	
+						<button class="accordion">Consistency and Standards</button>
+						<div class="panel">
+							<p>Users should not have to wonder whether different words, situations, or actions mean the same thing. Follow platform conventions and maintain consistency.</p>
+							<p>Purpose: Reduces confusion and improves learnability.</p>
+							<p>Implementation:</p>
+							<ul>
+								<li>Use consistent button styles, fonts, and colors across all pages.</li>
+								<li>Follow platform-specific design guidelines (e.g., Material Design for Android).</li>
+								<li>Ensure terminology is consistent (e.g., "Profile" is always called "Profile").</li>
+							</ul>
+						</div>
+	
+						<button class="accordion">Error Prevention</button>
+						<div class="panel">
+							<p>Even better than good error messages is a careful design that prevents a problem from occurring in the first place.</p>
+							<p>Purpose: Minimizes user frustration and prevents mistakes.</p>
+							<p>Implementation:</p>
+							<ul>
+								<li>Use confirmation dialogs for critical actions (e.g., deleting a saved location).</li>
+								<li>Validate inputs in real-time (e.g., checking for valid email formats during sign-up).</li>
+								<li>Provide clear instructions and constraints (e.g., character limits for text fields).</li>
+							</ul>
+						</div>
+	
+						<button class="accordion">Recognition Rather Than Recall</button>
+						<div class="panel">
+							<p>Minimize the user's memory load by making objects, actions, and options visible. The user should not have to remember information from one part of the dialogue to another.</p>
+							<p>Purpose: Reduces cognitive load and makes the app easier to use.</p>
+							<p>Implementation:</p>
+							<ul>
+								<li>Display saved locations prominently on the home screen.</li>
+								<li>Use visual cues like icons and labels to remind users of available actions.</li>
+								<li>Provide autocomplete or suggestions for search fields.</li>
+							</ul>
+						</div>
+	
+						<button class="accordion">Flexibility and Efficiency of Use</button>
+						<div class="panel">
+							<p>Accelerators — unseen by the novice user — may often speed up the interaction for the expert user, allowing the system to cater to both inexperienced and experienced users.</p>
+							<p>Purpose: Enhances usability for both new and experienced users.</p>
+							<p>Implementation:</p>
+							<ul>
+								<li>Provide shortcuts for frequent actions (e.g., quick access to saved locations).</li>
+								<li>Allow customization of the interface (e.g., rearranging widgets).</li>
+								<li>Support keyboard shortcuts for desktop users.</li>
+							</ul>
+						</div>
+	
+						<button class="accordion">Aesthetic and Minimalist Design</button>
+						<div class="panel">
+							<p>Dialogues should not contain information that is irrelevant or rarely needed. Every extra unit of information competes with the relevant units of information and diminishes their relative visibility.</p>
+							<p>Purpose: Keeps the interface clean and focused on the task at hand.</p>
+							<p>Implementation:</p>
+							<ul>
+								<li>Avoid cluttering the interface with unnecessary elements.</li>
+								<li>Use whitespace effectively to separate sections.</li>
+								<li>Prioritize essential information and hide advanced options behind menus.</li>
+							</ul>
+						</div>
 					</section>
 					<section class="blur-in-trigger hidden">
 						<h2><strong>Sketches - 1</strong></h2>
@@ -396,6 +542,7 @@
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
 		<script src="assets/js/animate_scroll.js"></script>
+		<script>src="assets/js/accordion.js"</script>
 		<script>
 			document.addEventListener('DOMContentLoaded', function () {
 				function setupTabs(tabContainerId, contentContainerId) {
@@ -423,6 +570,23 @@
 				setupTabs('sketch-tabs-3', 'sketch-content-3');
 				setupTabs('sketch-tabs-4', 'sketch-content-4');
 			});
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+
+			document.addEventListener('DOMContentLoaded', function () {
+            const collapsibles = document.querySelectorAll('.accordion');
+            collapsibles.forEach(collapsible => {
+                collapsible.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                    const panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            });
+        });
 		</script>
 	</body>
 </html>

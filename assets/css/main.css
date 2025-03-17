@@ -3176,6 +3176,55 @@ ul.special li a .label {
 			margin-top: 5px;
 		}
 
+
+		/* For accordion headers in research*/
+		/* Basic styling for the accordion */
+	.accordion-list {
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+		font-family: Arial, sans-serif;
+ 	 }
+  
+  	.accordion-item {
+		border: 1px solid #ddd;
+		margin-bottom: 10px;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+	
+	.accordion-header {
+		width: 100%;
+		padding: 15px;
+		text-align: left;
+		background-color: #f8f9fa;
+		border: none;
+		cursor: pointer;
+		font-size: 16px;
+		font-weight: bold;
+		transition: background-color 0.3s ease;
+	}
+		
+	.accordion-header:hover {
+		background-color: #e9ecef;
+	}
+		
+	.accordion-content {
+		padding: 0 15px;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.3s ease, padding 0.3s ease;
+	}
+	
+	.accordion-content p {
+		margin: 10px 0;
+	}
+	
+	.accordion-content.show {
+		max-height: 500px; /* Adjust based on content */
+		padding: 15px;
+	}
+
 		/* This is for APPENDICES*/
 		        /* Custom Styles for Appendices */
 				.appendices-section {
