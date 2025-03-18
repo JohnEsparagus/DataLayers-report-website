@@ -74,7 +74,7 @@
 				max-height: 0;
 				overflow: hidden;
 				transition: max-height 0.4s ease, padding 0.4s ease;
-				border-left: 5px solid #c4e0bd;
+				border-left: 5px solid #ffffff;
 				border-radius: 0 0 8px 8px;
 				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 			}
@@ -197,79 +197,64 @@
 				<div class="container">
 					<h2 class="major"><span>UI Design</span></h2>
 					<section class="blur-in-trigger hidden">
+						<h2><strong>Our Approach To  UI  Design</strong></h2>	
+						<p>Our approach to UI design was to create a simple, intuitive, and accessible interface that would
+							provide a positive user experience for all users, including those with disabilities. We started by
+							gathering requirements from stakeholders and creating personas to identify the target user base of
+							the app. We then created sketches of the planned interface and gathered feedback from users to
+							improve the design. We used design principles and heuristics to guide the design process and ensure
+							that the interface was user-friendly and accessible. We then created a prototype to explore the
+							design in greater depth and evaluate its user experience and practicality. The final design
+							incorporates feedback from users and improvements made to the prototypes, resulting in a simple,
+							intuitive, and accessible interface that provides a positive user experience for all users.</p>
+					</section>
+
+					<section class="blur-in-trigger hidden">
 						<h2><strong>Design Principles AI SLOP gotta make it moree specific to widget</strong></h2>
 						<button class="accordion">Visibility of System Status</button>
 						<div class="panel">
-							<p>The widget should always keep users informed about what is going on through appropriate feedback within a reasonable time.</p>
-							<p>Purpose: Users should never feel lost or confused on where they are going, additionally they shouldn't be misled by outdated information.</p>
+							<p>The widget should always keep users informed about what is going on through appropriate feedback within a reasonable time.
+							Users should never feel lost or confused on where they are going, additionally they shouldn't be misled by outdated information.</p>
 							<p>Implementation:</p>
 							<ul>
 								<li>Display loading indicators during data processing.</li>
-								<li>Show success or error messages after actions (e.g., saving a location).</li>
-								<li>Use progress bars or step indicators for multi-step processes.</li>
+								<li>Show success or error messages after actions (e.g. Selecting a widget themee).</li>
+								<li>Find accessibility locations within a specified radius nearby.</li>
 								<li>Show warnings for hazardous locations or outdated accessibility features that may not be there.</li>
 							</ul>
 						</div>
 	
 						<button class="accordion">Match Between System and the Real World</button>
 						<div class="panel">
-							<p>The widget should be in multiple languages, with vocabulary familiar to the user.</p>
-							<p>Purpose: Reduces the learning curve and makes the app more intuitive.</p>
+							<p>The widget should be in multiple languages, with vocabulary familiar to the user.
+							This reduces the learning curve and makes the app more intuitive.</p>
 							<p>Implementation:</p>
 							<ul>
-								<li>Use familiar terms like "Saved Locations" instead of technical jargon.</li>
-								<li>Use icons and labels that are universally understood (e.g., a house icon for "Home").</li>
-								<li>Align workflows with real-world tasks (e.g., saving a location mimics saving a bookmark).</li>
+								<li>Use familiar terms like 'Focus mode' instead of technical jargon.</li>
+								<li>Use icons and labels that are universally understood (e.g. Crosswalk universal signs).</li>
 							</ul>
 						</div>
 	
 						<button class="accordion">User Control and Freedom</button>
 						<div class="panel">
-							<p>Users often perform actions by mistake and need a clearly marked "emergency exit" to leave the unwanted state without having to go through an extended process.</p>
-							<p>Purpose: Gives users confidence to explore the app without fear of making irreversible mistakes.</p>
+							<p>Users often perform actions by mistake and scroll far away from current location on the widget. We must allow  them toundo these actions, giving users confidence to explore the app without fear of irreversible mistakes.</p>
 							<p>Implementation:</p>
 							<ul>
-								<li>Include "Back" or "Cancel" buttons prominently.</li>
-								<li>Allow users to undo actions (e.g., unsave a location).</li>
-								<li>Provide clear exit points from workflows (e.g., closing a modal or returning to the home screen).</li>
+								<li>Include "Recentre" buttons prominently.</li>
 							</ul>
 						</div>
 	
 						<button class="accordion">Consistency and Standards</button>
 						<div class="panel">
-							<p>Users should not have to wonder whether different words, situations, or actions mean the same thing. Follow platform conventions and maintain consistency.</p>
-							<p>Purpose: Reduces confusion and improves learnability.</p>
+							<p>Users should not have to wonder whether different words, situations, or actions mean the same thing. 
+							This reduces confusion and improves learnability.</p>
 							<p>Implementation:</p>
 							<ul>
 								<li>Use consistent button styles, fonts, and colors across all pages.</li>
-								<li>Follow platform-specific design guidelines (e.g., Material Design for Android).</li>
-								<li>Ensure terminology is consistent (e.g., "Profile" is always called "Profile").</li>
+								<li>Ensure terminology is consistent .</li>
 							</ul>
 						</div>
 	
-						<button class="accordion">Error Prevention</button>
-						<div class="panel">
-							<p>Even better than good error messages is a careful design that prevents a problem from occurring in the first place.</p>
-							<p>Purpose: Minimizes user frustration and prevents mistakes.</p>
-							<p>Implementation:</p>
-							<ul>
-								<li>Use confirmation dialogs for critical actions (e.g., deleting a saved location).</li>
-								<li>Validate inputs in real-time (e.g., checking for valid email formats during sign-up).</li>
-								<li>Provide clear instructions and constraints (e.g., character limits for text fields).</li>
-							</ul>
-						</div>
-	
-						<button class="accordion">Recognition Rather Than Recall</button>
-						<div class="panel">
-							<p>Minimize the user's memory load by making objects, actions, and options visible. The user should not have to remember information from one part of the dialogue to another.</p>
-							<p>Purpose: Reduces cognitive load and makes the app easier to use.</p>
-							<p>Implementation:</p>
-							<ul>
-								<li>Display saved locations prominently on the home screen.</li>
-								<li>Use visual cues like icons and labels to remind users of available actions.</li>
-								<li>Provide autocomplete or suggestions for search fields.</li>
-							</ul>
-						</div>
 	
 						<button class="accordion">Flexibility and Efficiency of Use</button>
 						<div class="panel">
@@ -285,13 +270,12 @@
 	
 						<button class="accordion">Aesthetic and Minimalist Design</button>
 						<div class="panel">
-							<p>Dialogues should not contain information that is irrelevant or rarely needed. Every extra unit of information competes with the relevant units of information and diminishes their relative visibility.</p>
-							<p>Purpose: Keeps the interface clean and focused on the task at hand.</p>
+							<p>A  simple minimalistic design keeps the interface clean and focused on the task at hand.</p>
 							<p>Implementation:</p>
 							<ul>
 								<li>Avoid cluttering the interface with unnecessary elements.</li>
-								<li>Use whitespace effectively to separate sections.</li>
 								<li>Prioritize essential information and hide advanced options behind menus.</li>
+								
 							</ul>
 						</div>
 					</section>
@@ -500,7 +484,7 @@
 				<p><strong>Reference 1:</strong> [1] H. Sharp, J. Preece, and Y. Rogers, Interaction Design: Beyond Human-Computer Interaction, 5th ed. Wiley, 2019. Accessed: Nov. 5, 2024. [Online]. Available: https://search-ebscohost-com.libproxy.ucl.ac.uk/login.aspx?direct=true&AuthType=ip,shib&db=nlebk&AN=2097340&site=ehost-live&scope=site</p>
 				<p><strong>Reference 2:</strong> [2] Microsoft, "Microsoft Soundscape," Microsoft, 2024. Accessed: Nov. 5, 2024. [Online]. Available: https://www.microsoft.com/en-us/research/product/soundscape/</p>
 				<p><strong>Reference 3:</strong> [3] "Building an App for Blind People: A Step-by-Step Guide to Creating Accessible and User-Friendly Navigation App," Interexy, [Online]. Available: https://interexy.com/building-app-for-blind-people-a-step-by-step-guide-to-creating-accessible-and-user-friendly-navigation-app/. [Accessed: 5-Nov-2024].</p>
-				<p><strong>Reference 4:</strong> [4] J. Nielsen, "10 Usability Heuristics for User Interface Design," Nielsen Norman Group, 1994. [Online]. Available: https://www.nngroup.com/articles/ten-usability-heuristics/. [Accessed: 5-Nov-2024]</p>
+				<p><strong>Reference 4:</strong> https://www.w3.org/2001/05/hfweb/heuristics.htm</p>
 				<p><strong>Reference 5:</strong> [5] Wheelmap, "Wheelmap: Find and Share Accessible Places," [Online]. Available: https://wheelmap.org/en/. [Accessed: 5-Nov-2024].</p>
 			</section>
 
