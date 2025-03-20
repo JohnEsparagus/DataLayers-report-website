@@ -8,6 +8,29 @@
     <style>
         p {
             font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .highlight {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-left: 5px solid #6bbf59;
+            margin: 20px 0;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .todo-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .todo-list li {
+            background: #f1f1f1;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -52,29 +75,24 @@
                             <article class="box page-content">
                                 <header>
                                     <h2>Blog Update</h2>
-                                    <p>December 1</p>
-
+                                    <p>7/11/2024</p>
                                 </header>
 
-                                <section >
-                                    <p>
-                                        This week, we are approaching our software engineering deadline. This coursework taught practical fundamentals of software development which helped guide us in this project, but this meant we were unable to complete as much work this fortnight.
-                                    </p>
-                                    <p>
-                                        During one of our lab sessions, we decided to check out a similar project ‘Barrier-free Route Guidance × MaPiece®’. This gave us so much relief, seeing a similar project we all decided to take a look at together during one of our lab sessions to see if we could get any inspiration from it.
-                                    </p>
-                                    
+                                <section>
+                                    <h3>Redefining Our HCI Approach</h3>
+                                    <p>Recently, we had to revisit and refine our Human-Computer Interaction (HCI) approach due to changing requirements. This led us to create additional sketches and prototypes to better align with our new objectives. We discovered that our focus should be on developing an embeddable widget for developers rather than a standalone application.</p>
+
+                                    <h3>New Requirements and Database Enhancements</h3>
+                                    <p>We have outlined a new set of requirements for our project:</p>
+                                    <p>Our database now includes an API that receives coordinates, object types, and reliability flags. This data is structured in JSON format and loaded into our database with multiple resolution options. We aim to have data layers for traffic lights, crossings, and wheelchair repair stations ready by January 21st.</p>
                                     <figure class="image-container">
-                                        <img class="image-style" src="../images/mapiece.png" alt="Image" style="max-width: 80%;">
-                                        <figcaption class="image-caption">Widget embedded in Barclays Website</figcaption>
+                                        <img class="image-style" src="../images/prototype2_2.png" alt="Image">
+                                        <figcaption class="image-caption">ppp</figcaption>
                                     </figure>
-                                    <p>
-                                        The documentation and details were so detailed it was difficult to read it all but we got the main idea.
-                                    </p>
-                                    <h3>Current Progress</h3>
-                                    <p><strong>Eric</strong> is currently working hard on the database visualization, making it look clean.</p>
-                                    <p><strong>Levon</strong> and <strong>Lenart</strong> are making fast progress on the backend.</p>
-                                    <p><strong>Amir</strong> is currently working on a prototype of the widget, seeing how it works and functions with Google Maps.</p>
+                                    <p>The frontend widget for developers will feature clear documentation, a Google-Maps-like interface, and a dropdown menu for selecting data layers. Users can choose the resolution of the data points, whether coordinates or what3words tags.</p>
+
+                                    <h3>On Hold for Confirmation</h3>
+                                    <p>Currently, we are on hold as we confirm our requirements and communicate with clients and Dean. Although there have been minor setbacks, they are not significant issues. During this time, our team has communicated extensively and has a clear understanding of the suitable roles for each member.</p>
                                 </section>
 
                             </article>
