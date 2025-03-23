@@ -97,36 +97,49 @@
 								</section>
 								<section class="blur-in-trigger hidden">
 									<h2><strong>Japan Walk Guide</strong></h2>
-									<p>Japan Walk Guide is a navigation tool, assisting individuals with mobility challenges navigating urban Japan. There is a big need to help those with accessibility issues in dense urban environments like Tokyo. This web app uses real-time data, and crowd-sourced information and many accessibility features.</p>
-									<p>There is also walking route assistance and surrounding information as you can see in the diagram, with detailed station information.</p>
+									<p>Japan Walk Guide is a navigation tool developed by NTT to assist individuals with mobility challenges in dense urban environments like Tokyo. The app combines AI-powered image recognition (using satellite imagery and street-view data) with crowdsourced updates to map accessibility features such as ramps, elevators, and obstacle-free pathways. It leverages 5G networks for real-time data transmission and integrates indoor navigation using Bluetooth beacons in stations and buildings. The app’s offline functionality is enabled by locally cached maps and preloaded accessibility data, while its QR-code launch system uses lightweight Progressive Web App (PWA) technology to avoid app installation. Community updates are moderated via a hybrid AI-human system to ensure accuracy.</p>
+									<p><strong>Key Technologies:</strong></p>
+									<ul class="custom-icon-list">
+										<li>AI/ML for obstacle detection and route optimization.</li>
+										<li>5G and edge computing for low-latency data updates.</li>
+										<li>Bluetooth Low Energy (BLE) for indoor navigation.</li>
+										<li>PWA for cross-platform compatibility and QR-code instant access.</li>
+									</ul>
 									<figure class="image-container">
 										<img class="image-style" src="images\japan_walk.jpg" alt="Japan Walk Guide UI" style="max-width: 100%">
 										<figcaption class="image-caption">Japan Walk Guide UI - 5 Step</figcaption>
 									</figure>
-									<p>This app has accessibility-focused design, with color-coded icons, voice-assisted navigation for hands-free use catering to a diverse portfolio of users. Community-driven updates ensure changes in the environment and reflect real-time, and the app remains up to date at all times. Additionally, the app has offline functionality and works on a variety of platforms. It can be easily launched by scanning a QR code.</p>
-									<p>The app also operates on a similar paradigm of easy access; Users would not download a dedicated app due to psychological barriers of installation, so our embedded widget is very suitable in this scenario.</p>
-									<h3>What we can learn:</h3>
+									<h3><strong>What We Can Learn</strong></h3>
+									<p><strong>Japan Walk Guide:</strong></p>
 									<ul class="custom-icon-list">
-										<li><i class="fas fa-users"></i> <strong>User-centered Design:</strong> Japan Walk shows the importance of designing with the users in mind. We can adopt a similar approach using a set of design heuristics like a checklist, including visual, auditory, and mobility impairments.</li>
-										<li><i class="fas fa-network-wired"></i> <strong>Community Platform:</strong> Japan Walk relies on user contributions to stay updated, so changes are reflected real-time. We could potentially implement a similar model, allowing users to submit updates.</li>
-										<li><i class="fas fa-route"></i> <strong>Route Guidance:</strong> The app incorporates route guidance and detailed information on locations and congestion, this is very useful and we should think about incorporating a route guidance algorithm.</li>
+										<li><i class="fas fa-users"></i> <strong>Hybrid Data Sourcing:</strong> Combining AI analysis (satellite imagery, street-view) with crowdsourcing ensures both scalability and accuracy.</li>
+										<li><i class="fas fa-network-wired"></i> <strong>Offline-First Design:</strong> Preloaded maps and PWAs reduce dependency on internet connectivity, critical in crowded urban areas.</li>
+										<li><i class="fas fa-route"></i> <strong>Indoor-Outdoor Integration:</strong> Bluetooth beacons bridge the gap between outdoor navigation and indoor accessibility.</li>
 									</ul>
 								</section>
 								<section class="blur-in-trigger hidden">
 									<h2><strong>Wheelmap</strong></h2>
-									<p>Wheelmap.org allows users to search and view the accessibility status of public places (e.g., restaurants, shops, and public buildings) using a color-coded system (green = fully accessible, yellow = partially accessible, red = not accessible).</p>
+									<p>Wheelmap.org is a global crowdsourced platform that uses OpenStreetMap as its base layer, allowing users to tag locations with accessibility statuses (green/yellow/red). The platform’s backend is built on Ruby on Rails, with a PostgreSQL database for storing accessibility metadata. Unlike Japan Walk, Wheelmap focuses on static accessibility data (e.g., step-free entrances, restroom accessibility) rather than real-time navigation. Its iOS and Android apps are native, using platform-specific SDKs for geolocation and map rendering. While Wheelmap offers a public API for developers, it lacks advanced features like voice navigation or AI-driven updates, relying entirely on manual user contributions.</p>
+									<p><strong>Key Technologies:</strong></p>
+									<ul class="custom-icon-list">
+										<li>OpenStreetMap for base mapping and geospatial data.</li>
+										<li>Native mobile apps (Swift for iOS, Kotlin for Android).</li>
+										<li>REST API for third-party integrations.</li>
+										<li>Community moderation tools for data validation.</li>
+									</ul>
 									<figure class="image-container">
 										<img class="image-style" src="images\wheelmap.png" alt="Wheelmap UI" style="max-width: 100%">
 										<figcaption class="image-caption">Wheelmap UI</figcaption>
 									</figure>
-									<p>This is a global platform, delivering reliable and concise information on accessibility.</p>
-									<h3>What we can learn:</h3>
+									<h3><strong>What We Can Learn</strong></h3>
+									<p><strong>Wheelmap:</strong></p>
 									<ul class="custom-icon-list">
-										<li><i class="fas fa-check-circle"></i> <strong>Simple Intuitive Interface:</strong> Wheelmap has a clean and straightforward interface, we can prioritize simplicity in our design so it's easier to navigate and understand information.</li>
-										<li><i class="fas fa-palette"></i> <strong>Color-coded System:</strong> Color-coded visual cues, and pleasing icon graphics can provide understandable cues on the accessibility status of a location. We will implement this sort of visual cue, to make our UI more intuitive.</li>
-										<li><i class="fas fa-exclamation-triangle"></i> <strong>Lacks Necessary Accessibility Features:</strong> Wheelmap is effective for most people however there is no voice assistance for hands-free, or UI design options for those who have trouble seeing. We can incorporate these to make our product inclusive and user-friendly for those with diverse needs.</li>
+										<li><i class="fas fa-check-circle"></i> <strong>Simplicity Over Complexity:</strong> Wheelmap’s success lies in its minimalist interface and clear color-coding, avoiding feature overload.</li>
+										<li><i class="fas fa-palette"></i> <strong>Community Trust:</strong> OpenStreetMap’s open-data model fosters transparency, but manual updates limit real-time reliability.</li>
+										<li><i class="fas fa-exclamation-triangle"></i> <strong>API Limitations:</strong> While Wheelmap’s API enables third-party use, its lack of voice/AR features highlights gaps we can address.</li>
 									</ul>
 								</section>
+
 								<section class="blur-in-trigger hidden">
 									
 									<h2><strong>Technology Review</strong></h2>
@@ -144,8 +157,8 @@
 					<h3>References</h3>
 					<p>IEEE style: reference definition needs the number. IEEE citation reference definition.</p>
 					<img src="../images/references.jpg" alt="References" class="image-featured">
-					<p><strong>Reference 1:</strong> [1] Author, "Title," Journal, vol. X, no. X, pp. X-X, Year.</p>
-					<p><strong>Reference 2:</strong> [2] Author, "Title," Journal, vol. X, no. X, pp. X-X, Year.</p>
+					<p>https://www.ntt-review.jp/archive/ntttechnical.php?contents=ntr202202fa8.html</p>
+					<p>https://news.wheelmap.org/en/faq/</p>
 					<p><strong>Reference 3:</strong> [3] Author, "Title," Journal, vol. X, no. X, pp. X-X, Year.</p>
 				</section>
 			<!-- Footer -->
